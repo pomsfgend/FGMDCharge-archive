@@ -1,0 +1,1284 @@
+Checking Python compatibility
+Setting IDF_PATH: C:\Users\g4g\esp\esp-idf-5.0.9
+
+Adding ESP-IDF tools to PATH...
+    C:\Espressif\tools\riscv32-esp-elf-gdb\12.1_20231023\riscv32-esp-elf-gdb\bin
+    C:\Espressif\tools\riscv32-esp-elf\esp-2022r1-11.2.0\riscv32-esp-elf\bin
+    C:\Espressif\tools\cmake\3.30.2\bin
+    C:\Espressif\tools\openocd-esp32\v0.12.0-esp32-20250226\openocd-esp32\bin
+    C:\Espressif\tools\ninja\1.12.1\
+    C:\Espressif\tools\idf-exe\1.0.3\
+    C:\Espressif\tools\ccache\4.10.2\ccache-4.10.2-windows-x86_64
+    C:\Espressif\python_env\idf5.0_py3.11_env\Scripts
+    C:\Users\g4g\esp\esp-idf-5.0.9\tools
+
+Checking if Python packages are up to date...
+Constraint file: C:\Espressif\espidf.constraints.v5.0.txt
+Requirement files:
+ - C:\Users\g4g\esp\esp-idf-5.0.9\tools\requirements\requirements.core.txt
+Python being checked: C:\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe
+Python requirements are satisfied.
+
+Detected installed tools that are not currently used by active ESP-IDF version.
+For removing old versions of amazon-corretto-11-x64-windows-jdk, ccache, dfu-util, esp-clang, esp-rom-elfs, esp32ulp-elf, espressif-ide, espup, openocd-esp32, riscv32-esp-elf, riscv32-esp-elf-gdb, rustup, vs_build_tools, xtensa-esp-elf, xtensa-esp-elf-gdb use command 'python.exe C:\Users\g4g\esp\esp-idf-5.0.9\tools\idf_tools.py uninstall'
+For free up even more space, remove installation packages of those tools. Use option 'python.exe C:\Users\g4g\esp\esp-idf-5.0.9\tools\idf_tools.py uninstall --remove-archives'.
+
+
+Done! You can now compile ESP-IDF projects.
+Go to the project directory and run:
+
+  idf.py build
+
+Enter cube COM port (example COM7):com19
+Executing action: monitor
+Running idf_monitor in directory C:\FGMDCharge_V2
+Executing "C:\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:\Users\g4g\esp\esp-idf-5.0.9\tools/idf_monitor.py -p com19 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --decode-panic backtrace C:\FGMDCharge_V2\build\FD_ROUND_V2.elf --force-color -m 'C:\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe' 'C:\Users\g4g\esp\esp-idf-5.0.9\tools\idf.py' '-p' 'com19'"...
+--- idf_monitor on com19 115200 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0xfb8
+load:0x403c9700,len:0xc58
+load:0x403cc700,len:0x2cd4
+entry 0x403c98ac
+BOOT reason 1 seq 2 slot 1
+E (25) esp_image: image at 0x1a0000 has invalid magic byte (nothing flashed here?)
+E (25) boot: OTA app partition slot 1 is not bootable
+I (278) cpu_start: Multicore app
+I (279) octal_psram: vendor id    : 0x0d (AP)
+I (279) octal_psram: dev id       : 0x02 (generation 3)
+I (281) octal_psram: density      : 0x03 (64 Mbit)
+I (287) octal_psram: good-die     : 0x01 (Pass)
+I (292) octal_psram: Latency      : 0x01 (Fixed)
+I (297) octal_psram: VCC          : 0x01 (3V)
+I (302) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (308) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (314) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (320) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (326) octal_psram: DriveStrength: 0x00 (1/1)
+I (332) MSPI Timing: PSRAM timing tuning index: 5
+I (336) esp_psram: Found 8MB PSRAM device
+I (341) esp_psram: Speed: 80MHz
+I (345) cpu_start: Pro cpu up.
+I (349) cpu_start: Starting app cpu, entry point is 0x40375080
+I (0) cpu_start: App cpu up.
+I (778) esp_psram: SPI SRAM memory test OK
+I (786) cpu_start: Pro cpu start user code
+I (786) cpu_start: cpu freq: 240000000 Hz
+I (787) cpu_start: Application information:
+I (790) cpu_start: Project name:     FD_ROUND_S3
+I (795) cpu_start: App version:      notes/2.3.0-2.5.8-11-g72a13da-d
+I (802) cpu_start: Compile time:     Oct 18 2026 12:44:02
+I (808) cpu_start: ELF file SHA256:  2af0028aaaacea64...
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+I (814) cpu_start: ESP-IDF:          v5.0.9
+I (819) cpu_start: Min chip rev:     v0.0
+I (823) cpu_start: Max chip rev:     v0.99
+I (828) cpu_start: Chip rev:         v0.2
+I (833) heap_init: Initializing. RAM available for dynamic allocation:
+I (840) heap_init: At 3FCAD668 len 0003C0A8 (240 KiB): DRAM
+I (846) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM
+I (853) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (859) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM
+I (866) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (873) spi_flash: detected chip: boya
+I (878) spi_flash: flash io: qio
+I (882) coexist: coexist rom version e7ae62f
+I (887) app_start: Starting scheduler on CPU0
+I (891) app_start: Starting scheduler on CPU1
+I (891) main_task: Started on CPU0
+I (901) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (911) main_task: Calling app_main()
+W (911) MAIN: boot FD_ROUND_S3 3.0.15
+W (921) SAFE_OTA: single image at 0x00010000, factory rollback off
+I (921) SETTINGS: NVS namespace 'storage' ready
+I (931) gpio: GPIO[6]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (941) gpio: GPIO[7]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+W (951) SM_RELAY: relays OK A=GPIO6 B=GPIO7 both OFF
+W (951) MAIN: stage: relays OK (both OFF)
+W (961) ADC_PWM: backlight PWM GPIO21 ON
+W (961) MAIN: stage: adc/pwm done
+I (971) GBT_CAN: CAN/TWAI up: TX=17 RX=18 bitrate=250000
+W (971) MAIN: stage: CAN task ok
+W (981) MAIN: stage: SM 10ms task ok
+I (981) SM_RELAY: state -> HANDSHAKE_INIT (1) sub=0
+I (991) SM_RELAY: state -> WAIT_CRM (2) sub=0
+W (991) BMS: UART 9600: A TX1/RX2, B TX40/RX41. +13 В разъёма на ESP не подавать
+I (1001) gpio: GPIO[42]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1011) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2
+W (1021) FARDRIVER: мост 19200 8N1 TX GPIO42 -> RX фарика, RX GPIO39 <- TX фарика. Земля общая, без резистора
+W (1031) TOUCH: XPT2046 waits for SPI. GPIO1/2 are BMS, not this touch
+W (1041) MAIN: stage: touch ok
+I (1051) pp: pp rom version: e7ae62f
+I (1051) net80211: net80211 rom version: e7ae62f
+I (1061) wifi:wifi driver task: 3fcc5e40, prio:23, stack:3584, core=0
+I (1061) system_api: Base MAC address is not set
+I (1071) system_api: read default base MAC address from EFUSE
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0).
+
+Core  0 register dump:
+Stack dump detected
+PC      : 0x4037ce62  PS      : 0x00060234  A0      : 0x8037dc6e  A1      : 0x3fcc5980
+A2      : 0x3fca6ace  A3      : 0x00000001  A4      : 0x00000001  A5      : 0x3c161428
+A6      : 0x000000ff  A7      : 0x3fcc5b70  A8      : 0x00000000  A9      : 0x3fcc5960
+A10     : 0x00000000  A11     : 0x4037cdd8  A12     : 0x00000001  A13     : 0x00000000
+A14     : 0x00000004  A15     : 0x3fca6d34  SAR     : 0x00000012  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x40055825  LEND    : 0x4005583f  LCOUNT  : 0xfffffffd
+
+
+Backtrace: 0x4037ce5f:0x3fcc5980 0x4037dc6b:0x3fcc59a0 0x4037dc73:0x3fcc59c0 0x4037f981:0x3fcc59e0 0x4037d801:0x3fcc5a00 0x420cd9ed:0x3fcc5a40 0x420841fa:0x3fcc5a70 0x42102471:0x3fcc5a90 0x42084dd1:0x3fcc5ab0 0x420832bd:0x3fcc5b10 0x420837e5:0x3fcc5b60 0x4208406d:0x3fcc5bd0 0x42082f34:0x3fcc5bf0 0x420b5685:0x3fcc5c20 0x420b591f:0x3fcc5c60 0x420b7efd:0x3fcc5c80 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+0x420cd9ed: _vfprintf_r at ??:?
+
+0x420841fa: ieee80211_parse_rsn at ??:?
+
+0x42084dd1: wifi_nvs_cfg_init at ??:?
+
+0x420832bd: rsn_cipher at ieee80211_input.o:?
+
+0x420837e5: ieee80211_setup_lr_rates at ??:?
+
+0x4208406d: ieee80211_parse_rsn at ??:?
+
+0x42082f34: cnx_auth_done at ??:?
+
+0x420b5685: mbedtls_pk_info_from_type at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pk.c:112
+
+0x420b591f: mbedtls_pk_verify_ext at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pk.c:1122
+
+0x420b7efd: x509_crt_verify_chain at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:2651
+ (inlined by) x509_crt_verify_restartable_ca_cb at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:3100
+
+0x420b6632: mbedtls_pk_parse_key_pkcs8_encrypted_der at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkparse.c:925
+
+0x40388829: xTaskPriorityInherit at C:/Users/g4g/esp/esp-idf-5.0.9/components/freertos/FreeRTOS-Kernel/tasks.c:4985
+
+
+
+Core  1 register dump:
+PC      : 0x4201368d  PS      : 0x00060234  A0      : 0x8201380b  A1      : 0x3fcc0a10
+0x4201368d: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:87
+
+A2      : 0x00000000  A3      : 0x0e9e14bb  A4      : 0x00000000  A5      : 0x0e9dcb7d
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x04facd6f  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060420  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060423  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x4201368a:0x3fcc0a10 0x42013808:0x3fcc0a40
+0x4201368a: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:76
+
+0x42013808: esp_lcd_panel_init at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_ops.c:21 (discriminator 5)
+
+
+
+
+
+Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\FGMDCharge_V2\\build\\FD_ROUND_V2.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe" "C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py" --target esp32c3 "C:\\Users\\g4g\\AppData\\Local\\Temp\\tmp2ezh_va6"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py --target esp32c3 C:\\Users\\g4g\\AppData\\Local\\Temp\\tmp2ezh_va6': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+
+Core  0 register dump:
+PC      : 0x4037ce62  PS      : 0x00060234  A0      : 0x8037dc6e  A1      : 0x3fcc5980
+A2      : 0x3fca6ace  A3      : 0x00000001  A4      : 0x00000001  A5      : 0x3c161428
+A6      : 0x000000ff  A7      : 0x3fcc5b70  A8      : 0x00000000  A9      : 0x3fcc5960
+A10     : 0x00000000  A11     : 0x4037cdd8  A12     : 0x00000001  A13     : 0x00000000
+A14     : 0x00000004  A15     : 0x3fca6d34  SAR     : 0x00000012  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x40055825  LEND    : 0x4005583f  LCOUNT  : 0xfffffffd
+
+
+Backtrace: 0x4037ce5f:0x3fcc5980 0x4037dc6b:0x3fcc59a0 0x4037dc73:0x3fcc59c0 0x4037f981:0x3fcc59e0 0x4037d801:0x3fcc5a00 0x420cd9ed:0x3fcc5a40 0x420841fa:0x3fcc5a70 0x42102471:0x3fcc5a90 0x42084dd1:0x3fcc5ab0 0x420832bd:0x3fcc5b10 0x420837e5:0x3fcc5b60 0x4208406d:0x3fcc5bd0 0x42082f34:0x3fcc5bf0 0x420b5685:0x3fcc5c20 0x420b591f:0x3fcc5c60 0x420b7efd:0x3fcc5c80 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+
+
+Core  1 register dump:
+PC      : 0x4201368d  PS      : 0x00060234  A0      : 0x8201380b  A1      : 0x3fcc0a10
+A2      : 0x00000000  A3      : 0x0e9e14bb  A4      : 0x00000000  A5      : 0x0e9dcb7d
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x04facd6f  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060420  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060423  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x4201368a:0x3fcc0a10 0x42013808:0x3fcc0a40
+
+
+
+
+ELF file SHA256: 2af0028aaaacea64
+ELF file SHA256: 2af0028aaaacea64
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403756dd
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0xfb8
+load:0x403c9700,len:0xc58
+load:0x403cc700,len:0x2cd4
+entry 0x403c98ac
+BOOT reason 3 seq 2 slot 1
+E (29) esp_image: image at 0x1a0000 has invalid magic byte (nothing flashed here?)
+E (30) boot: OTA app partition slot 1 is not bootable
+I (282) cpu_start: Multicore app
+I (283) octal_psram: vendor id    : 0x0d (AP)
+I (283) octal_psram: dev id       : 0x02 (generation 3)
+I (286) octal_psram: density      : 0x03 (64 Mbit)
+I (291) octal_psram: good-die     : 0x01 (Pass)
+I (297) octal_psram: Latency      : 0x01 (Fixed)
+I (302) octal_psram: VCC          : 0x01 (3V)
+I (307) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (313) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (319) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (324) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (330) octal_psram: DriveStrength: 0x00 (1/1)
+I (336) MSPI Timing: PSRAM timing tuning index: 5
+I (341) esp_psram: Found 8MB PSRAM device
+I (345) esp_psram: Speed: 80MHz
+I (349) cpu_start: Pro cpu up.
+I (353) cpu_start: Starting app cpu, entry point is 0x40375080
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+I (0) cpu_start: App cpu up.
+I (782) esp_psram: SPI SRAM memory test OK
+I (791) cpu_start: Pro cpu start user code
+I (791) cpu_start: cpu freq: 240000000 Hz
+I (791) cpu_start: Application information:
+I (794) cpu_start: Project name:     FD_ROUND_S3
+I (799) cpu_start: App version:      notes/2.3.0-2.5.8-11-g72a13da-d
+I (806) cpu_start: Compile time:     Oct 18 2026 12:44:02
+I (812) cpu_start: ELF file SHA256:  2af0028aaaacea64...
+I (818) cpu_start: ESP-IDF:          v5.0.9
+I (823) cpu_start: Min chip rev:     v0.0
+I (828) cpu_start: Max chip rev:     v0.99
+I (833) cpu_start: Chip rev:         v0.2
+I (837) heap_init: Initializing. RAM available for dynamic allocation:
+I (845) heap_init: At 3FCAD668 len 0003C0A8 (240 KiB): DRAM
+I (851) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM
+I (858) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (864) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM
+I (870) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (878) spi_flash: detected chip: boya
+I (882) spi_flash: flash io: qio
+I (886) coexist: coexist rom version e7ae62f
+I (891) app_start: Starting scheduler on CPU0
+I (896) app_start: Starting scheduler on CPU1
+I (896) main_task: Started on CPU0
+I (906) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (916) main_task: Calling app_main()
+W (916) MAIN: boot FD_ROUND_S3 3.0.15
+W (926) SAFE_OTA: single image at 0x00010000, factory rollback off
+I (926) SETTINGS: NVS namespace 'storage' ready
+I (936) gpio: GPIO[6]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (946) gpio: GPIO[7]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+W (956) SM_RELAY: relays OK A=GPIO6 B=GPIO7 both OFF
+W (956) MAIN: stage: relays OK (both OFF)
+W (966) ADC_PWM: backlight PWM GPIO21 ON
+W (966) MAIN: stage: adc/pwm done
+I (976) GBT_CAN: CAN/TWAI up: TX=17 RX=18 bitrate=250000
+W (976) MAIN: stage: CAN task ok
+W (986) MAIN: stage: SM 10ms task ok
+I (986) SM_RELAY: state -> HANDSHAKE_INIT (1) sub=0
+I (996) SM_RELAY: state -> WAIT_CRM (2) sub=0
+W (996) BMS: UART 9600: A TX1/RX2, B TX40/RX41. +13 В разъёма на ESP не подавать
+I (1006) gpio: GPIO[42]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1016) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2
+W (1026) FARDRIVER: мост 19200 8N1 TX GPIO42 -> RX фарика, RX GPIO39 <- TX фарика. Земля общая, без резистора
+W (1036) TOUCH: XPT2046 waits for SPI. GPIO1/2 are BMS, not this touch
+W (1046) MAIN: stage: touch ok
+I (1056) pp: pp rom version: e7ae62f
+I (1056) net80211: net80211 rom version: e7ae62f
+I (1066) wifi:wifi driver task: 3fcc5e40, prio:23, stack:3584, core=0
+I (1066) system_api: Base MAC address is not set
+I (1076) system_api: read default base MAC address from EFUSE
+I (1076) wifi:wifi firmware version: f4bd5bac9
+I (1086) wifi:wifi certification version: v7.0
+I (1086) wifi:config NVS flash: enabled
+I (1086) wifi:config nano formating: disabled
+I (1096) wifi:Init data frame dynamic rx buffer num: 8
+I (1096) wifi:Init static rx mgmt buffer num: 5
+I (1106) wifi:Init management short buffer num: 8
+I (1106) wifi:Init static tx buffer num: 16
+I (1116) wifi:Init tx cache buffer num: 16
+I (1116) wifi:Init static tx FG buffer num: 2
+I (1116) wifi:Init static rx buffer size: 1600
+I (1126) wifi:Init static rx buffer num: 6
+I (1126) wifi:Init dynamic rx buffer num: 8
+I (1136) wifi_init: rx ba win: 6
+I (1136) wifi_init: tcpip mbox: 16
+I (1136) wifi_init: udp mbox: 6
+I (1146) wifi_init: tcp mbox: 6
+I (1146) wifi_init: tcp tx win: 5760
+I (1146) wifi_init: tcp rx win: 5760
+I (1156) wifi_init: tcp mss: 1440
+I (1156) wifi_init: WiFi/LWIP prefer SPIRAM
+I (1166) wifi_init: WiFi IRAM OP enabled
+I (1166) wifi_init: WiFi RX IRAM OP enabled
+W (1176) WEB: wifi buffers static_rx=6 dyn_rx=8 dyn_tx=8 ampdu_rx=0
+W (1176) WEB: wifi storage RAM -> ESP_OK
+I (1186) wifi:Set ps type: 0, coexist: 0
+
+I (1186) wifi:set country: cc=CN schan=1 nchan=13 policy=1
+
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0).
+
+Core  0 register dump:
+PC      : 0x42005b72  PS      : 0x00060334  A0      : 0x820a481a  A1      : 0x3fcc58f0
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+Stack dump detected
+0x42005b72: uart_tcgetattr at C:/Users/g4g/esp/esp-idf-5.0.9/components/vfs/vfs_uart.c:877
+
+0x42005b6f: uart_tcgetattr at C:/Users/g4g/esp/esp-idf-5.0.9/components/vfs/vfs_uart.c:877
+
+0x420a4817: wpa_write_wpa_ie at C:/Users/g4g/esp/esp-idf-5.0.9/components/wpa_supplicant/src/ap/wpa_auth_ie.c:31
+ (inlined by) wpa_auth_gen_wpa_ie at C:/Users/g4g/esp/esp-idf-5.0.9/components/wpa_supplicant/src/ap/wpa_auth_ie.c:325
+
+0x420a0a33: dhcps_start at C:/Users/g4g/esp/esp-idf-5.0.9/components/lwip/apps/dhcpserver/dhcpserver.c:1277 (discriminator 1)
+
+0x42098bf5: ppTxqEmpty at ??:?
+
+0x42097e49: ppCalTkipMic at ??:?
+
+0x420b7575: pkcs5_pbkdf2_hmac at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkcs5.c:343
+ (inlined by) mbedtls_pkcs5_pbkdf2_hmac_ext at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkcs5.c:389
+
+0x420b87fd: x509_get_crt_ext at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1015
+ (inlined by) x509_crt_parse_der_core at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1258
+ (inlined by) mbedtls_x509_crt_parse_der_internal at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1350
+ (inlined by) mbedtls_x509_crt_parse_der_internal at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1313
+
+0x420b6632: mbedtls_pk_parse_key_pkcs8_encrypted_der at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkparse.c:925
+
+A2      : 0x00000020  A3      : 0x3fca1d3c  A4      : 0x3fc9d16c  A5      : 0x00000000
+A6      : 0x600c0024  A7      : 0x0000018e  A8      : 0xffffffff  A9      : 0x3fcc58d0
+A10     : 0x0000018a  A11     : 0x00000001  A12     : 0x00060320  A13     : 0xb33fffff
+A14     : 0x3fca02c4  A15     : 0x00060323  SAR     : 0x00000009  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x400570e8  LEND    : 0x400570f3  LCOUNT  : 0xffffffff
+
+
+Backtrace: 0x42005b6f:0x3fcc58f0 0x420a4817:0x3fcc5910 0x420a0a33:0x3fcc5930 0x42098bf5:0x3fcc5950 0x42097e49:0x3fcc5bc0 0x420b7575:0x3fcc5bf0 0x420b87fd:0x3fcc5c70 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+0x40388829: xTaskPriorityInherit at C:/Users/g4g/esp/esp-idf-5.0.9/components/freertos/FreeRTOS-Kernel/tasks.c:4985
+
+0x42013693: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:87
+
+0x42013690: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:87
+
+0x42013808: esp_lcd_panel_init at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_ops.c:21 (discriminator 5)
+
+
+
+Core  1 register dump:
+PC      : 0x42013693  PS      : 0x00060734  A0      : 0x8201380b  A1      : 0x3fcc0a10
+A2      : 0x00000000  A3      : 0x0f6ff4c8  A4      : 0x00000000  A5      : 0x0f6fab8a
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x04f0f366  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060920  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060923  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x42013690:0x3fcc0a10 0x42013808:0x3fcc0a40
+
+
+
+
+Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\FGMDCharge_V2\\build\\FD_ROUND_V2.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe" "C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py" --target esp32c3 "C:\\Users\\g4g\\AppData\\Local\\Temp\\tmpgh4r559k"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py --target esp32c3 C:\\Users\\g4g\\AppData\\Local\\Temp\\tmpgh4r559k': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+
+Core  0 register dump:
+PC      : 0x42005b72  PS      : 0x00060334  A0      : 0x820a481a  A1      : 0x3fcc58f0
+A2      : 0x00000020  A3      : 0x3fca1d3c  A4      : 0x3fc9d16c  A5      : 0x00000000
+A6      : 0x600c0024  A7      : 0x0000018e  A8      : 0xffffffff  A9      : 0x3fcc58d0
+A10     : 0x0000018a  A11     : 0x00000001  A12     : 0x00060320  A13     : 0xb33fffff
+A14     : 0x3fca02c4  A15     : 0x00060323  SAR     : 0x00000009  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x400570e8  LEND    : 0x400570f3  LCOUNT  : 0xffffffff
+
+
+Backtrace: 0x42005b6f:0x3fcc58f0 0x420a4817:0x3fcc5910 0x420a0a33:0x3fcc5930 0x42098bf5:0x3fcc5950 0x42097e49:0x3fcc5bc0 0x420b7575:0x3fcc5bf0 0x420b87fd:0x3fcc5c70 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+
+
+Core  1 register dump:
+PC      : 0x42013693  PS      : 0x00060734  A0      : 0x8201380b  A1      : 0x3fcc0a10
+A2      : 0x00000000  A3      : 0x0f6ff4c8  A4      : 0x00000000  A5      : 0x0f6fab8a
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x04f0f366  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060920  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060923  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x42013690:0x3fcc0a10 0x42013808:0x3fcc0a40
+
+
+
+
+ELF file SHA256: 2af0028aaaacea64
+ELF file SHA256: 2af0028aaaacea64
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403756dd
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0xfb8
+load:0x403c9700,len:0xc58
+load:0x403cc700,len:0x2cd4
+entry 0x403c98ac
+BOOT reason 3 seq 2 slot 1
+E (29) esp_image: image at 0x1a0000 has invalid magic byte (nothing flashed here?)
+E (30) boot: OTA app partition slot 1 is not bootable
+I (282) cpu_start: Multicore app
+I (283) octal_psram: vendor id    : 0x0d (AP)
+I (283) octal_psram: dev id       : 0x02 (generation 3)
+I (286) octal_psram: density      : 0x03 (64 Mbit)
+I (291) octal_psram: good-die     : 0x01 (Pass)
+I (297) octal_psram: Latency      : 0x01 (Fixed)
+I (302) octal_psram: VCC          : 0x01 (3V)
+I (307) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (313) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (319) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (324) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (330) octal_psram: DriveStrength: 0x00 (1/1)
+I (336) MSPI Timing: PSRAM timing tuning index: 5
+I (341) esp_psram: Found 8MB PSRAM device
+I (345) esp_psram: Speed: 80MHz
+I (349) cpu_start: Pro cpu up.
+I (353) cpu_start: Starting app cpu, entry point is 0x40375080
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+I (0) cpu_start: App cpu up.
+I (782) esp_psram: SPI SRAM memory test OK
+I (791) cpu_start: Pro cpu start user code
+I (791) cpu_start: cpu freq: 240000000 Hz
+I (791) cpu_start: Application information:
+I (794) cpu_start: Project name:     FD_ROUND_S3
+I (799) cpu_start: App version:      notes/2.3.0-2.5.8-11-g72a13da-d
+I (806) cpu_start: Compile time:     Oct 18 2026 12:44:02
+I (812) cpu_start: ELF file SHA256:  2af0028aaaacea64...
+I (818) cpu_start: ESP-IDF:          v5.0.9
+I (823) cpu_start: Min chip rev:     v0.0
+I (828) cpu_start: Max chip rev:     v0.99
+I (833) cpu_start: Chip rev:         v0.2
+I (837) heap_init: Initializing. RAM available for dynamic allocation:
+I (845) heap_init: At 3FCAD668 len 0003C0A8 (240 KiB): DRAM
+I (851) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM
+I (858) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (864) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM
+I (870) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (878) spi_flash: detected chip: boya
+I (882) spi_flash: flash io: qio
+I (886) coexist: coexist rom version e7ae62f
+I (891) app_start: Starting scheduler on CPU0
+I (896) app_start: Starting scheduler on CPU1
+I (896) main_task: Started on CPU0
+I (906) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (916) main_task: Calling app_main()
+W (916) MAIN: boot FD_ROUND_S3 3.0.15
+W (926) SAFE_OTA: single image at 0x00010000, factory rollback off
+I (926) SETTINGS: NVS namespace 'storage' ready
+I (936) gpio: GPIO[6]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (946) gpio: GPIO[7]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+W (956) SM_RELAY: relays OK A=GPIO6 B=GPIO7 both OFF
+W (956) MAIN: stage: relays OK (both OFF)
+W (966) ADC_PWM: backlight PWM GPIO21 ON
+W (966) MAIN: stage: adc/pwm done
+I (976) GBT_CAN: CAN/TWAI up: TX=17 RX=18 bitrate=250000
+W (976) MAIN: stage: CAN task ok
+W (986) MAIN: stage: SM 10ms task ok
+I (986) SM_RELAY: state -> HANDSHAKE_INIT (1) sub=0
+I (996) SM_RELAY: state -> WAIT_CRM (2) sub=0
+W (996) BMS: UART 9600: A TX1/RX2, B TX40/RX41. +13 В разъёма на ESP не подавать
+I (1006) gpio: GPIO[42]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1016) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2
+W (1026) FARDRIVER: мост 19200 8N1 TX GPIO42 -> RX фарика, RX GPIO39 <- TX фарика. Земля общая, без резистора
+W (1036) TOUCH: XPT2046 waits for SPI. GPIO1/2 are BMS, not this touch
+W (1046) MAIN: stage: touch ok
+I (1056) pp: pp rom version: e7ae62f
+I (1056) net80211: net80211 rom version: e7ae62f
+I (1066) wifi:wifi driver task: 3fcc5e40, prio:23, stack:3584, core=0
+I (1066) system_api: Base MAC address is not set
+I (1076) system_api: read default base MAC address from EFUSE
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0).
+
+Core  0 register dump:
+PC      : 0x4037ce5c  PS      : 0x00060234  A0      : 0x8037dc6e  A1      : 0x3fcc5980
+A2      : 0x3fca6ace  A3      : 0x00000001  A4      : 0x00000001  A5      : 0x3c161428
+A6      : 0x000000ff  A7      : 0x3fcc5b70  A8      : 0x00000000  A9      : 0x3fcc5960
+A10     : 0x00000000  A11     : 0x4037cdd8  A12     : 0x00000001  A13     : 0x00000000
+A14     : 0x00000004  A15     : 0x3fca6d34  SAR     : 0x00000012  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x40055825  LEND    : 0x4005583f  LCOUNT  : 0xfffffffd
+
+
+Backtrace: 0x4037ce59:0x3fcc5980 0x4037dc6b:0x3fcc59a0 0x4037dc73:0x3fcc59c0 0x4037f981:0x3fcc59e0 0x4037d801:0x3fcc5a00 0x420cd9ed:0x3fcc5a40 0x420841fa:0x3fcc5a70 0x42102471:0x3fcc5a90 0x42084dd1:0x3fcc5ab0 0x420832bd:0x3fcc5b10 0x420837e5:0x3fcc5b60 0x4208406d:0x3fcc5bd0 0x42082f34:0x3fcc5bf0 0x420b5685:0x3fcc5c20 0x420b591f:0x3fcc5c60 0x420b7efd:0x3fcc5c80 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+GetOverlappedResult failed (PermissionError(13, 'Отказано в доступе.', None, 5))
+Waiting for the device to reconnectWarning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+Stack dump detected
+.0x420cd9ed: _vfprintf_r at ??:?
+
+0x420841fa: ieee80211_parse_rsn at ??:?
+
+.0x42084dd1: wifi_nvs_cfg_init at ??:?
+
+0x420832bd: rsn_cipher at ieee80211_input.o:?
+
+0x420837e5: ieee80211_setup_lr_rates at ??:?
+
+0x4208406d: ieee80211_parse_rsn at ??:?
+
+0x42082f34: cnx_auth_done at ??:?
+
+.0x420b5685: mbedtls_pk_info_from_type at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pk.c:112
+
+0x420b591f: mbedtls_pk_verify_ext at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pk.c:1122
+
+0x420b7efd: x509_crt_verify_chain at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:2651
+ (inlined by) x509_crt_verify_restartable_ca_cb at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:3100
+
+0x420b6632: mbedtls_pk_parse_key_pkcs8_encrypted_der at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkparse.c:925
+
+0x40388829: xTaskPriorityInherit at C:/Users/g4g/esp/esp-idf-5.0.9/components/freertos/FreeRTOS-Kernel/tasks.c:4985
+
+0x42013690: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:87
+
+.0x4201368d: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:87
+
+0x42013808: esp_lcd_panel_init at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_ops.c:21 (discriminator 5)
+
+.
+
+Core  1 register dump:
+PC      : 0x42013690  PS      : 0x00060234  A0      : 0x8201380b  A1      : 0x3fcc0a10
+A2      : 0x00000000  A3      : 0x0eaed9c9  A4      : 0x00000000  A5      : 0x0eae908b
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x09c7e671  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060420  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060423  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x4201368d:0x3fcc0a10 0x42013808:0x3fcc0a40
+
+
+
+
+.Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\FGMDCharge_V2\\build\\FD_ROUND_V2.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe" "C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py" --target esp32c3 "C:\\Users\\g4g\\AppData\\Local\\Temp\\tmp6ouyx47x"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py --target esp32c3 C:\\Users\\g4g\\AppData\\Local\\Temp\\tmp6ouyx47x': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+
+Core  0 register dump:
+PC      : 0x4037ce5c  PS      : 0x00060234  A0      : 0x8037dc6e  A1      : 0x3fcc5980
+A2      : 0x3fca6ace  A3      : 0x00000001  A4      : 0x00000001  A5      : 0x3c161428
+A6      : 0x000000ff  A7      : 0x3fcc5b70  A8      : 0x00000000  A9      : 0x3fcc5960
+A10     : 0x00000000  A11     : 0x4037cdd8  A12     : 0x00000001  A13     : 0x00000000
+A14     : 0x00000004  A15     : 0x3fca6d34  SAR     : 0x00000012  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x40055825  LEND    : 0x4005583f  LCOUNT  : 0xfffffffd
+
+
+Backtrace: 0x4037ce59:0x3fcc5980 0x4037dc6b:0x3fcc59a0 0x4037dc73:0x3fcc59c0 0x4037f981:0x3fcc59e0 0x4037d801:0x3fcc5a00 0x420cd9ed:0x3fcc5a40 0x420841fa:0x3fcc5a70 0x42102471:0x3fcc5a90 0x42084dd1:0x3fcc5ab0 0x420832bd:0x3fcc5b10 0x420837e5:0x3fcc5b60 0x4208406d:0x3fcc5bd0 0x42082f34:0x3fcc5bf0 0x420b5685:0x3fcc5c20 0x420b591f:0x3fcc5c60 0x420b7efd:0x3fcc5c80 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+
+
+Core  1 register dump:
+PC      : 0x42013690  PS      : 0x00060234  A0      : 0x8201380b  A1      : 0x3fcc0a10
+A2      : 0x00000000  A3      : 0x0eaed9c9  A4      : 0x00000000  A5      : 0x0eae908b
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x09c7e671  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060420  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060423  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x4201368d:0x3fcc0a10 0x42013808:0x3fcc0a40
+
+
+
+
+ELF file SHA256: 2af0028aaaacea64
+ELF file SHA256: 2af0028aaaacea64
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403756dd
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0xfb8
+load:0x403c9700,len:0xc58
+load:0x403cc700,len:0x2cd4
+entry 0x403c98ac
+BOOT reason 3 seq 2 slot 1
+E (29) esp_image: image at 0x1a0000 has invalid magic byte (nothing flashed here?)
+E (30) boot: OTA app partition slot 1 is not bootable
+I (282) cpu_start: Multicore app
+I (283) octal_psram: vendor id    : 0x0d (AP)
+I (283) octal_psram: dev id       : 0x02 (generation 3)
+I (286) octal_psram: density      : 0x03 (64 Mbit)
+I (291) octal_psram: good-die     : 0x01 (Pass)
+I (297) octal_psram: Latency      : 0x01 (Fixed)
+I (302) octal_psram: VCC          : 0x01 (3V)
+I (307) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (313) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (319) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (324) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (330) octal_psram: DriveStrength: 0x00 (1/1)
+I (336) MSPI Timing: PSRAM timing tuning index: 5
+I (341) esp_psram: Found 8MB PSRAM device
+I (345) esp_psram: Speed: 80MHz
+I (349) cpu_start: Pro cpu up.
+I (353) cpu_start: Starting app cpu, entry point is 0x40375080
+I (0) cpu_start: App cpu up.
+I (782) esp_psram: SPI SRAM memory test OK
+I (791) cpu_start: Pro cpu start user code
+I (791) cpu_start: cpu freq: 240000000 Hz
+I (791) cpu_start: Application information:
+I (794) cpu_start: Project name:     FD_ROUND_S3
+I (799) cpu_start: App version:      notes/2.3.0-2.5.8-11-g72a13da-d
+I (806) cpu_start: Compile time:     Oct 18 2026 12:44:02
+I (812) cpu_start: ELF file SHA256:  2af0028aaaacea64...
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+.Stack dump detected
+I (818) cpu_start: ESP-IDF:          v5.0.9
+I (823) cpu_start: Min chip rev:     v0.0
+I (828) cpu_start: Max chip rev:     v0.99
+I (833) cpu_start: Chip rev:         v0.2
+I (837) heap_init: Initializing. RAM available for dynamic allocation:
+I (845) heap_init: At 3FCAD668 len 0003C0A8 (240 KiB): DRAM
+I (851) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM
+I (858) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (864) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM
+I (870) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (878) spi_flash: detected chip: boya
+I (882) spi_flash: flash io: qio
+I (886) coexist: coexist rom version e7ae62f
+I (891) app_start: Starting scheduler on CPU0
+I (896) app_start: Starting scheduler on CPU1
+I (896) main_task: Started on CPU0
+I (906) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (916) main_task: Calling app_main()
+W (916) MAIN: boot FD_ROUND_S3 3.0.15
+W (926) SAFE_OTA: single image at 0x00010000, factory rollback off
+I (926) SETTINGS: NVS namespace 'storage' ready
+I (936) gpio: GPIO[6]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (946) gpio: GPIO[7]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+W (956) SM_RELAY: relays OK A=GPIO6 B=GPIO7 both OFF
+W (956) MAIN: stage: relays OK (both OFF)
+W (966) ADC_PWM: backlight PWM GPIO21 ON
+W (966) MAIN: stage: adc/pwm done
+I (976) GBT_CAN: CAN/TWAI up: TX=17 RX=18 bitrate=250000
+W (976) MAIN: stage: CAN task ok
+W (986) MAIN: stage: SM 10ms task ok
+I (986) SM_RELAY: state -> HANDSHAKE_INIT (1) sub=0
+I (996) SM_RELAY: state -> WAIT_CRM (2) sub=0
+W (996) BMS: UART 9600: A TX1/RX2, B TX40/RX41. +13 В разъёма на ESP не подавать
+I (1006) gpio: GPIO[42]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1016) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2
+W (1026) FARDRIVER: мост 19200 8N1 TX GPIO42 -> RX фарика, RX GPIO39 <- TX фарика. Земля общая, без резистора
+W (1036) TOUCH: XPT2046 waits for SPI. GPIO1/2 are BMS, not this touch
+W (1046) MAIN: stage: touch ok
+I (1056) pp: pp rom version: e7ae62f
+I (1056) net80211: net80211 rom version: e7ae62f
+I (1066) wifi:wifi driver task: 3fcc5e40, prio:23, stack:3584, core=0
+I (1066) system_api: Base MAC address is not set
+I (1076) system_api: read default base MAC address from EFUSE
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0).
+
+Core  0 register dump:
+PC      : 0x4037ce5c  PS      : 0x00060d34  A0      : 0x8037dc6e  A1      : 0x3fcc5980
+A2      : 0x3fca6ace  A3      : 0x00000001  A4      : 0x00000001  A5      : 0x3c161428
+A6      : 0x000000ff  A7      : 0x3fcc5b70  A8      : 0x00000000  A9      : 0x3fcc5960
+A10     : 0x00000000  A11     : 0x4037cdd8  A12     : 0x00000001  A13     : 0x00000000
+A14     : 0x00000004  A15     : 0x3fca6d34  SAR     : 0x00000012  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x40055825  LEND    : 0x4005583f  LCOUNT  : 0xfffffffd
+
+
+Backtrace: 0x4037ce59:0x3fcc5980 0x4037dc6b:0x3fcc59a0 0x4037dc73:0x3fcc59c0 0x4037f981:0x3fcc59e0 0x4037d801:0x3fcc5a00 0x420cd9ed:0x3fcc5a40 0x420841fa:0x3fcc5a70 0x42102471:0x3fcc5a90 0x42084dd1:0x3fcc5ab0 0x420832bd:0x3fcc5b10 0x420837e5:0x3fcc5b60 0x4208406d:0x3fcc5bd0 0x42082f34:0x3fcc5bf0 0x420b5685:0x3fcc5c20 0x420b591f:0x3fcc5c60 0x420b7efd:0x3fcc5c80 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+0x420cd9ed: _vfprintf_r at ??:?
+
+0x420841fa: ieee80211_parse_rsn at ??:?
+
+.0x42084dd1: wifi_nvs_cfg_init at ??:?
+
+0x420832bd: rsn_cipher at ieee80211_input.o:?
+
+0x420837e5: ieee80211_setup_lr_rates at ??:?
+
+0x4208406d: ieee80211_parse_rsn at ??:?
+
+0x42082f34: cnx_auth_done at ??:?
+
+0x420b5685: mbedtls_pk_info_from_type at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pk.c:112
+
+0x420b591f: mbedtls_pk_verify_ext at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pk.c:1122
+
+.0x420b7efd: x509_crt_verify_chain at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:2651
+ (inlined by) x509_crt_verify_restartable_ca_cb at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:3100
+
+0x420b6632: mbedtls_pk_parse_key_pkcs8_encrypted_der at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkparse.c:925
+
+0x40388829: xTaskPriorityInherit at C:/Users/g4g/esp/esp-idf-5.0.9/components/freertos/FreeRTOS-Kernel/tasks.c:4985
+
+
+
+Core  1 register dump:
+PC      : 0x4201368d  PS      : 0x00060734  A0      : 0x8201380b  A1      : 0x3fcc0a10
+0x4201368d: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:87
+
+A2      : 0x00000000  A3      : 0x0f407c22  A4      : 0x00000000  A5      : 0x0f4032e4
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x050ab8b1  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060920  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060923  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x4201368a:0x3fcc0a10 0x42013808:0x3fcc0a40
+0x4201368a: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:76
+
+0x42013808: esp_lcd_panel_init at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_ops.c:21 (discriminator 5)
+
+
+
+
+
+.Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\FGMDCharge_V2\\build\\FD_ROUND_V2.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe" "C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py" --target esp32c3 "C:\\Users\\g4g\\AppData\\Local\\Temp\\tmpasfr8qz_"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py --target esp32c3 C:\\Users\\g4g\\AppData\\Local\\Temp\\tmpasfr8qz_': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+
+Core  0 register dump:
+PC      : 0x4037ce5c  PS      : 0x00060d34  A0      : 0x8037dc6e  A1      : 0x3fcc5980
+A2      : 0x3fca6ace  A3      : 0x00000001  A4      : 0x00000001  A5      : 0x3c161428
+A6      : 0x000000ff  A7      : 0x3fcc5b70  A8      : 0x00000000  A9      : 0x3fcc5960
+A10     : 0x00000000  A11     : 0x4037cdd8  A12     : 0x00000001  A13     : 0x00000000
+A14     : 0x00000004  A15     : 0x3fca6d34  SAR     : 0x00000012  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x40055825  LEND    : 0x4005583f  LCOUNT  : 0xfffffffd
+
+
+Backtrace: 0x4037ce59:0x3fcc5980 0x4037dc6b:0x3fcc59a0 0x4037dc73:0x3fcc59c0 0x4037f981:0x3fcc59e0 0x4037d801:0x3fcc5a00 0x420cd9ed:0x3fcc5a40 0x420841fa:0x3fcc5a70 0x42102471:0x3fcc5a90 0x42084dd1:0x3fcc5ab0 0x420832bd:0x3fcc5b10 0x420837e5:0x3fcc5b60 0x4208406d:0x3fcc5bd0 0x42082f34:0x3fcc5bf0 0x420b5685:0x3fcc5c20 0x420b591f:0x3fcc5c60 0x420b7efd:0x3fcc5c80 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+
+
+Core  1 register dump:
+PC      : 0x4201368d  PS      : 0x00060734  A0      : 0x8201380b  A1      : 0x3fcc0a10
+A2      : 0x00000000  A3      : 0x0f407c22  A4      : 0x00000000  A5      : 0x0f4032e4
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x050ab8b1  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060920  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060923  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x4201368a:0x3fcc0a10 0x42013808:0x3fcc0a40
+
+
+
+
+ELF file SHA256: 2af0028aaaacea64
+ELF file SHA256: 2af0028aaaacea64
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403756dd
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0xfb8
+load:0x403c9700,len:0xc58
+load:0x403cc700,len:0x2cd4
+entry 0x403c98ac
+BOOT reason 3 seq 2 slot 1
+E (29) esp_image: image at 0x1a0000 has invalid magic byte (nothing flashed here?)
+E (30) boot: OTA app partition slot 1 is not bootable
+I (282) cpu_start: Multicore app
+I (283) octal_psram: vendor id    : 0x0d (AP)
+I (283) octal_psram: dev id       : 0x02 (generation 3)
+I (286) octal_psram: density      : 0x03 (64 Mbit)
+I (291) octal_psram: good-die     : 0x01 (Pass)
+I (297) octal_psram: Latency      : 0x01 (Fixed)
+I (302) octal_psram: VCC          : 0x01 (3V)
+I (307) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (313) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (319) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (324) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (330) octal_psram: DriveStrength: 0x00 (1/1)
+I (336) MSPI Timing: PSRAM timing tuning index: 5
+I (341) esp_psram: Found 8MB PSRAM device
+I (345) esp_psram: Speed: 80MHz
+I (349) cpu_start: Pro cpu up.
+I (353) cpu_start: Starting app cpu, entry point is 0x40375080
+I (0) cpu_start: App cpu up.
+I (782) esp_psram: SPI SRAM memory test OK
+I (791) cpu_start: Pro cpu start user code
+I (791) cpu_start: cpu freq: 240000000 Hz
+I (791) cpu_start: Application information:
+I (794) cpu_start: Project name:     FD_ROUND_S3
+I (799) cpu_start: App version:      notes/2.3.0-2.5.8-11-g72a13da-d
+I (806) cpu_start: Compile time:     Oct 18 2026 12:44:02
+I (812) cpu_start: ELF file SHA256:  2af0028aaaacea64...
+.Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+Stack dump detected
+0x40383847: read_id_core at C:/Users/g4g/esp/esp-idf-5.0.9/components/spi_flash/esp_flash_api.c:370
+
+I (818) cpu_start: ESP-IDF:          v5.0.9
+I (823) cpu_start: Min chip rev:     v0.0
+I (828) cpu_start: Max chip rev:     v0.99
+I (833) cpu_start: Chip rev:         v0.2
+I (837) heap_init: Initializing. RAM available for dynamic allocation:
+I (845) heap_init: At 3FCAD668 len 0003C0A8 (240 KiB): DRAM
+I (851) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM
+I (858) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (864) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM
+I (870) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (878) spi_flash: detected chip: boya
+I (882) spi_flash: flash io: qio
+I (886) coexist: coexist rom version e7ae62f
+I (891) app_start: Starting scheduler on CPU0
+I (896) app_start: Starting scheduler on CPU1
+I (896) main_task: Started on CPU0
+I (906) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (916) main_task: Calling app_main()
+W (916) MAIN: boot FD_ROUND_S3 3.0.15
+W (926) SAFE_OTA: single image at 0x00010000, factory rollback off
+I (926) SETTINGS: NVS namespace 'storage' ready
+I (936) gpio: GPIO[6]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (946) gpio: GPIO[7]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+W (956) SM_RELAY: relays OK A=GPIO6 B=GPIO7 both OFF
+W (956) MAIN: stage: relays OK (both OFF)
+W (966) ADC_PWM: backlight PWM GPIO21 ON
+W (966) MAIN: stage: adc/pwm done
+I (976) GBT_CAN: CAN/TWAI up: TX=17 RX=18 bitrate=250000
+W (976) MAIN: stage: CAN task ok
+W (986) MAIN: stage: SM 10ms task ok
+I (986) SM_RELAY: state -> HANDSHAKE_INIT (1) sub=0
+I (996) SM_RELAY: state -> WAIT_CRM (2) sub=0
+W (996) BMS: UART 9600: A TX1/RX2, B TX40/RX41. +13 В разъёма на ESP не подавать
+I (1006) gpio: GPIO[42]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1016) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2
+W (1026) FARDRIVER: мост 19200 8N1 TX GPIO42 -> RX фарика, RX GPIO39 <- TX фарика. Земля общая, без резистора
+W (1036) TOUCH: XPT2046 waits for SPI. GPIO1/2 are BMS, not this touch
+W (1046) MAIN: stage: touch ok
+I (1056) pp: pp rom version: e7ae62f
+I (1056) net80211: net80211 rom version: e7ae62f
+I (1066) wifi:wifi driver task: 3fcc5e40, prio:23, stack:3584, core=0
+I (1066) system_api: Base MAC address is not set
+I (1076) system_api: read default base MAC address from EFUSE
+I (1076) wifi:wifi firmware version: f4bd5bac9
+I (1086) wifi:wifi certification version: v7.0
+I (1086) wifi:config NVS flash: enabled
+I (1086) wifi:config nano formating: disabled
+I (1096) wifi:Init data frame dynamic rx buffer num: 8
+I (1096) wifi:Init static rx mgmt buffer num: 5
+I (1106) wifi:Init management short buffer num: 8
+I (1106) wifi:Init static tx buffer num: 16
+I (1116) wifi:Init tx cache buffer num: 16
+I (1116) wifi:Init static tx FG buffer num: 2
+I (1116) wifi:Init static rx buffer size: 1600
+I (1126) wifi:Init static rx buffer num: 6
+I (1126) wifi:Init dynamic rx buffer num: 8
+I (1136) wifi_init: rx ba win: 6
+I (1136) wifi_init: tcpip mbox: 16
+I (1136) wifi_init: udp mbox: 6
+I (1146) wifi_init: tcp mbox: 6
+I (1146) wifi_init: tcp tx win: 5760
+I (1146) wifi_init: tcp rx win: 5760
+I (1156) wifi_init: tcp mss: 1440
+I (1156) wifi_init: WiFi/LWIP prefer SPIRAM
+I (1166) wifi_init: WiFi IRAM OP enabled
+I (1166) wifi_init: WiFi RX IRAM OP enabled
+W (1176) WEB: wifi buffers static_rx=6 dyn_rx=8 dyn_tx=8 ampdu_rx=0
+W (1176) WEB: wifi storage RAM -> ESP_OK
+I (1186) wifi:Set ps type: 0, coexist: 0
+
+I (1186) wifi:set country: cc=CN schan=1 nchan=13 policy=1
+
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0).
+
+Core  0 register dump:
+PC      : 0x40383847  PS      : 0x00060d34  A0      : 0x803829cc  A1      : 0x3fcc5830
+A2      : 0x3fca2070  A3      : 0x00000000  A4      : 0x00060b20  A5      : 0x00000004
+A6      : 0x501b7c94  A7      : 0xce0e4090  A8      : 0x00000000  A9      : 0x3fcc5930
+A10     : 0x00060d20  A11     : 0x3fcc5af0  A12     : 0x00000f9f  A13     : 0x9e32c745
+A14     : 0x00001000  A15     : 0xb06d9e4c  SAR     : 0x00000009  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x400570e8  LEND    : 0x400570f3  LCOUNT  : 0xffffffff
+.
+
+Backtrace: 0x40383844:0x3fcc5830 0x403829c9:0x3fcc5850 0x403771d3:0x3fcc5870 0x40377265:0x3fcc58b0 0x420cdcd9:0x3fcc58d0 0x420cdcf3:0x3fcc58f0 0x420a480f:0x3fcc5910 0x420a0a33:0x3fcc5930 0x42098bb2:0x3fcc5950 0x42097e49:0x3fcc5bc0 0x420b7575:0x3fcc5bf0 0x420b87fd:0x3fcc5c70 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+0x40383844: read_id_core at C:/Users/g4g/esp/esp-idf-5.0.9/components/spi_flash/esp_flash_api.c:371
+
+0x403829c9: spi_device_polling_start at C:/Users/g4g/esp/esp-idf-5.0.9/components/driver/spi_master.c:982
+
+0x420cdcd9: _vfprintf_r at ??:?
+
+0x420cdcf3: _vfprintf_r at ??:?
+
+0x420a480f: wpa_auth_gen_wpa_ie at C:/Users/g4g/esp/esp-idf-5.0.9/components/wpa_supplicant/src/ap/wpa_auth_ie.c:324
+
+0x420a0a33: dhcps_start at C:/Users/g4g/esp/esp-idf-5.0.9/components/lwip/apps/dhcpserver/dhcpserver.c:1277 (discriminator 1)
+
+0x42098bb2: ppInitTxq at ??:?
+
+.0x42097e49: ppCalTkipMic at ??:?
+
+0x420b7575: pkcs5_pbkdf2_hmac at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkcs5.c:343
+ (inlined by) mbedtls_pkcs5_pbkdf2_hmac_ext at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkcs5.c:389
+
+0x420b87fd: x509_get_crt_ext at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1015
+ (inlined by) x509_crt_parse_der_core at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1258
+ (inlined by) mbedtls_x509_crt_parse_der_internal at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1350
+ (inlined by) mbedtls_x509_crt_parse_der_internal at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1313
+
+0x420b6632: mbedtls_pk_parse_key_pkcs8_encrypted_der at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkparse.c:925
+
+0x40388829: xTaskPriorityInherit at C:/Users/g4g/esp/esp-idf-5.0.9/components/freertos/FreeRTOS-Kernel/tasks.c:4985
+
+
+
+Core  1 register dump:
+PC      : 0x42013690  PS      : 0x00060734  A0      : 0x8201380b  A1      : 0x3fcc0a10
+0x42013690: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:87
+
+A2      : 0x00000000  A3      : 0x0f743944  A4      : 0x00000000  A5      : 0x0f73f006
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x0a7f0180  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060920  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060923  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x4201368d:0x3fcc0a10 0x42013808:0x3fcc0a40
+0x4201368d: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:87
+
+0x42013808: esp_lcd_panel_init at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_ops.c:21 (discriminator 5)
+
+
+
+
+
+..Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\FGMDCharge_V2\\build\\FD_ROUND_V2.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe" "C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py" --target esp32c3 "C:\\Users\\g4g\\AppData\\Local\\Temp\\tmpykyxopbr"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py --target esp32c3 C:\\Users\\g4g\\AppData\\Local\\Temp\\tmpykyxopbr': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+
+Core  0 register dump:
+PC      : 0x40383847  PS      : 0x00060d34  A0      : 0x803829cc  A1      : 0x3fcc5830
+A2      : 0x3fca2070  A3      : 0x00000000  A4      : 0x00060b20  A5      : 0x00000004
+A6      : 0x501b7c94  A7      : 0xce0e4090  A8      : 0x00000000  A9      : 0x3fcc5930
+A10     : 0x00060d20  A11     : 0x3fcc5af0  A12     : 0x00000f9f  A13     : 0x9e32c745
+A14     : 0x00001000  A15     : 0xb06d9e4c  SAR     : 0x00000009  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x400570e8  LEND    : 0x400570f3  LCOUNT  : 0xffffffff
+
+
+Backtrace: 0x40383844:0x3fcc5830 0x403829c9:0x3fcc5850 0x403771d3:0x3fcc5870 0x40377265:0x3fcc58b0 0x420cdcd9:0x3fcc58d0 0x420cdcf3:0x3fcc58f0 0x420a480f:0x3fcc5910 0x420a0a33:0x3fcc5930 0x42098bb2:0x3fcc5950 0x42097e49:0x3fcc5bc0 0x420b7575:0x3fcc5bf0 0x420b87fd:0x3fcc5c70 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+
+
+Core  1 register dump:
+PC      : 0x42013690  PS      : 0x00060734  A0      : 0x8201380b  A1      : 0x3fcc0a10
+A2      : 0x00000000  A3      : 0x0f743944  A4      : 0x00000000  A5      : 0x0f73f006
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x0a7f0180  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060920  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060923  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x4201368d:0x3fcc0a10 0x42013808:0x3fcc0a40
+
+
+
+
+ELF file SHA256: 2af0028aaaacea64
+ELF file SHA256: 2af0028aaaacea64
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403756dd
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0xfb8
+load:0x403c9700,len:0xc58
+load:0x403cc700,len:0x2cd4
+entry 0x403c98ac
+BOOT reason 3 seq 2 slot 1
+E (29) esp_image: image at 0x1a0000 has invalid magic byte (nothing flashed here?)
+E (30) boot: OTA app partition slot 1 is not bootable
+I (282) cpu_start: Multicore app
+I (283) octal_psram: vendor id    : 0x0d (AP)
+I (283) octal_psram: dev id       : 0x02 (generation 3)
+I (286) octal_psram: density      : 0x03 (64 Mbit)
+I (291) octal_psram: good-die     : 0x01 (Pass)
+I (297) octal_psram: Latency      : 0x01 (Fixed)
+I (302) octal_psram: VCC          : 0x01 (3V)
+I (307) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (313) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (319) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (324) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (330) octal_psram: DriveStrength: 0x00 (1/1)
+I (336) MSPI Timing: PSRAM timing tuning index: 5
+I (341) esp_psram: Found 8MB PSRAM device
+I (345) esp_psram: Speed: 80MHz
+I (349) cpu_start: Pro cpu up.
+I (353) cpu_start: Starting app cpu, entry point is 0x40375080
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+I (0) cpu_start: App cpu up.
+I (782) esp_psram: SPI SRAM memory test OK
+I (791) cpu_start: Pro cpu start user code
+I (791) cpu_start: cpu freq: 240000000 Hz
+I (791) cpu_start: Application information:
+I (794) cpu_start: Project name:     FD_ROUND_S3
+I (799) cpu_start: App version:      notes/2.3.0-2.5.8-11-g72a13da-d
+I (806) cpu_start: Compile time:     Oct 18 2026 12:44:02
+I (812) cpu_start: ELF file SHA256:  2af0028aaaacea64...
+I (818) cpu_start: ESP-IDF:          v5.0.9
+I (823) cpu_start: Min chip rev:     v0.0
+I (828) cpu_start: Max chip rev:     v0.99
+I (833) cpu_start: Chip rev:         v0.2
+I (837) heap_init: Initializing. RAM available for dynamic allocation:
+I (845) heap_init: At 3FCAD668 len 0003C0A8 (240 KiB): DRAM
+I (851) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM
+I (858) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (864) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM
+I (870) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (878) spi_flash: detected chip: boya
+I (882) spi_flash: flash io: qio
+I (886) coexist: coexist rom version e7ae62f
+I (891) app_start: Starting scheduler on CPU0
+I (896) app_start: Starting scheduler on CPU1
+I (896) main_task: Started on CPU0
+I (906) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (916) main_task: Calling app_main()
+W (916) MAIN: boot FD_ROUND_S3 3.0.15
+W (926) SAFE_OTA: single image at 0x00010000, factory rollback off
+I (926) SETTINGS: NVS namespace 'storage' ready
+I (936) gpio: GPIO[6]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (946) gpio: GPIO[7]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+W (956) SM_RELAY: relays OK A=GPIO6 B=GPIO7 both OFF
+W (956) MAIN: stage: relays OK (both OFF)
+W (966) ADC_PWM: backlight PWM GPIO21 ON
+W (966) MAIN: stage: adc/pwm done
+I (976) GBT_CAN: CAN/TWAI up: TX=17 RX=18 bitrate=250000
+W (976) MAIN: stage: CAN task ok
+W (986) MAIN: stage: SM 10ms task ok
+I (986) SM_RELAY: state -> HANDSHAKE_INIT (1) sub=0
+I (996) SM_RELAY: state -> WAIT_CRM (2) sub=0
+W (996) BMS: UART 9600: A TX1/RX2, B TX40/RX41. +13 В разъёма на ESP не подавать
+I (1006) gpio: GPIO[42]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1016) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2
+W (1026) FARDRIVER: мост 19200 8N1 TX GPIO42 -> RX фарика, RX GPIO39 <- TX фарика. Земля общая, без резистора
+W (1036) TOUCH: XPT2046 waits for SPI. GPIO1/2 are BMS, not this touch
+W (1046) MAIN: stage: touch ok
+I (1056) pp: pp rom version: e7ae62f
+I (1056) net80211: net80211 rom version: e7ae62f
+I (1066) wifi:wifi driver task: 3fcc5e40, prio:23, stack:3584, core=0
+I (1066) system_api: Base MAC address is not set
+I (1076) system_api: read default base MAC address from EFUSE
+I (1076) wifi:wifi firmware version: f4bd5bac9
+I (1086) wifi:wifi certification version: v7.0
+I (1086) wifi:config NVS flash: enabled
+I (1086) wifi:config nano formating: disabled
+I (1096) wifi:Init data frame dynamic rx buffer num: 8
+I (1096) wifi:Init static rx mgmt buffer num: 5
+I (1106) wifi:Init management short buffer num: 8
+I (1106) wifi:Init static tx buffer num: 16
+I (1116) wifi:Init tx cache buffer num: 16
+I (1116) wifi:Init static tx FG buffer num: 2
+I (1116) wifi:Init static rx buffer size: 1600
+I (1126) wifi:Init static rx buffer num: 6
+I (1126) wifi:Init dynamic rx buffer num: 8
+I (1136) wifi_init: rx ba win: 6
+I (1136) wifi_init: tcpip mbox: 16
+I (1136) wifi_init: udp mbox: 6
+I (1146) wifi_init: tcp mbox: 6
+I (1146) wifi_init: tcp tx win: 5760
+I (1146) wifi_init: tcp rx win: 5760
+I (1156) wifi_init: tcp mss: 1440
+I (1156) wifi_init: WiFi/LWIP prefer SPIRAM
+I (1166) wifi_init: WiFi IRAM OP enabled
+I (1166) wifi_init: WiFi RX IRAM OP enabled
+W (1176) WEB: wifi buffers static_rx=6 dyn_rx=8 dyn_tx=8 ampdu_rx=0
+W (1176) WEB: wifi storage RAM -> ESP_OK
+.Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+I (1186) wifi:Set ps type: 0, coexist: 0
+
+I (1186) wifi:set country: cc=CN schan=1 nchan=13 policy=1
+
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0).
+
+Core  0 register dump:
+PC      : 0x42082bac  PS      : 0x00060134  A0      : 0x820a47cd  A1      : 0x3fcc5840
+A2      : 0x00000000  A3      : 0x00200000  A4      : 0x3c168f4c  A5      : 0x3c168fb8
+A6      : 0x3c168f74  A7      : 0x00000080  A8      : 0x82082b6a  A9      : 0x3fcc5820
+A10     : 0x3c168f4c  A11     : 0x3fca1d84  A12     : 0x00060120  A13     : 0xb33fffff
+A14     : 0x00000000  A15     : 0x00060123  SAR     : 0x00000019  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x400570e8  LEND    : 0x400570f3  LCOUNT  : 0xffffffff
+
+
+Backtrace: 0x42082ba9:0x3fcc5840 0x420a47ca:0x3fcc5860 0x420a8b79:0x3fcc58d0 0x420a4bbc:0x3fcc58f0 0x420a0a4e:0x3fcc5930 0x42098bb2:0x3fcc5950 0x42097e49:0x3fcc5bc0 0x420b7575:0x3fcc5bf0 0x420b87fd:0x3fcc5c70 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+Stack dump detected
+0x42082bac: cnx_node_join at ??:?
+
+0x42082ba9: cnx_node_join at ??:?
+
+0x420a47ca: wpa_auth_gen_wpa_ie at C:/Users/g4g/esp/esp-idf-5.0.9/components/wpa_supplicant/src/ap/wpa_auth_ie.c:302
+
+0x420a8b79: wpa_sm_set_pmk_from_pmksa at C:/Users/g4g/esp/esp-idf-5.0.9/components/wpa_supplicant/src/rsn_supp/wpa.c:2256
+
+.0x420a4bbc: wpa_parse_generic at C:/Users/g4g/esp/esp-idf-5.0.9/components/wpa_supplicant/src/ap/wpa_auth_ie.c:613
+ (inlined by) wpa_parse_kde_ies at C:/Users/g4g/esp/esp-idf-5.0.9/components/wpa_supplicant/src/ap/wpa_auth_ie.c:680
+
+0x420a0a4e: dhcps_start at C:/Users/g4g/esp/esp-idf-5.0.9/components/lwip/apps/dhcpserver/dhcpserver.c:1291
+
+0x42098bb2: ppInitTxq at ??:?
+
+0x42097e49: ppCalTkipMic at ??:?
+
+0x420b7575: pkcs5_pbkdf2_hmac at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkcs5.c:343
+ (inlined by) mbedtls_pkcs5_pbkdf2_hmac_ext at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkcs5.c:389
+
+0x420b87fd: x509_get_crt_ext at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1015
+ (inlined by) x509_crt_parse_der_core at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1258
+ (inlined by) mbedtls_x509_crt_parse_der_internal at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1350
+ (inlined by) mbedtls_x509_crt_parse_der_internal at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/x509_crt.c:1313
+
+0x420b6632: mbedtls_pk_parse_key_pkcs8_encrypted_der at C:/Users/g4g/esp/esp-idf-5.0.9/components/mbedtls/mbedtls/library/pkparse.c:925
+
+0x40388829: xTaskPriorityInherit at C:/Users/g4g/esp/esp-idf-5.0.9/components/freertos/FreeRTOS-Kernel/tasks.c:4985
+
+
+
+Core  1 register dump:
+PC      : 0x4201368d  PS      : 0x00060734  A0      : 0x8201380b  A1      : 0x3fcc0a10
+.0x4201368d: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:87
+
+A2      : 0x00000000  A3      : 0x0f7af74b  A4      : 0x00000000  A5      : 0x0f7aae0d
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x04fbf5f6  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060920  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060923  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x4201368a:0x3fcc0a10 0x42013808:0x3fcc0a40
+0x4201368a: esp_lcd_new_panel_st7789 at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_st7789.c:76
+
+0x42013808: esp_lcd_panel_init at C:/Users/g4g/esp/esp-idf-5.0.9/components/esp_lcd/src/esp_lcd_panel_ops.c:21 (discriminator 5)
+
+
+
+
+
+.Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\FGMDCharge_V2\\build\\FD_ROUND_V2.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe" "C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py" --target esp32c3 "C:\\Users\\g4g\\AppData\\Local\\Temp\\tmpmgvp3a0m"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.0_py3.11_env\\Scripts\\python.exe C:\\Users\\g4g\\esp\\esp-idf-5.0.9\\tools\\idf_monitor_base\\..\\gdb_panic_server.py --target esp32c3 C:\\Users\\g4g\\AppData\\Local\\Temp\\tmpmgvp3a0m': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+
+Core  0 register dump:
+PC      : 0x42082bac  PS      : 0x00060134  A0      : 0x820a47cd  A1      : 0x3fcc5840
+A2      : 0x00000000  A3      : 0x00200000  A4      : 0x3c168f4c  A5      : 0x3c168fb8
+A6      : 0x3c168f74  A7      : 0x00000080  A8      : 0x82082b6a  A9      : 0x3fcc5820
+A10     : 0x3c168f4c  A11     : 0x3fca1d84  A12     : 0x00060120  A13     : 0xb33fffff
+A14     : 0x00000000  A15     : 0x00060123  SAR     : 0x00000019  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x400570e8  LEND    : 0x400570f3  LCOUNT  : 0xffffffff
+
+
+Backtrace: 0x42082ba9:0x3fcc5840 0x420a47ca:0x3fcc5860 0x420a8b79:0x3fcc58d0 0x420a4bbc:0x3fcc58f0 0x420a0a4e:0x3fcc5930 0x42098bb2:0x3fcc5950 0x42097e49:0x3fcc5bc0 0x420b7575:0x3fcc5bf0 0x420b87fd:0x3fcc5c70 0x420b6632:0x3fcc5ca0 0x40388829:0x3fcc5cc0
+
+
+Core  1 register dump:
+PC      : 0x4201368d  PS      : 0x00060734  A0      : 0x8201380b  A1      : 0x3fcc0a10
+A2      : 0x00000000  A3      : 0x0f7af74b  A4      : 0x00000000  A5      : 0x0f7aae0d
+A6      : 0x00000001  A7      : 0x00000001  A8      : 0x04fbf5f6  A9      : 0x3fcc0a00
+A10     : 0x3fca1d88  A11     : 0x3fca1d88  A12     : 0x00060920  A13     : 0xb33fffff
+A14     : 0x00060a23  A15     : 0x00060923  SAR     : 0x00000000  EXCCAUSE: 0x00000005
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000
+
+
+Backtrace: 0x4201368a:0x3fcc0a10 0x42013808:0x3fcc0a40
+
+
+
+
+ELF file SHA256: 2af0028aaaacea64
+ELF file SHA256: 2af0028aaaacea64
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403756dd
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0xfb8
+load:0x403c9700,len:0xc58
+load:0x403cc700,len:0x2cd4
+entry 0x403c98ac
+BOOT reason 3 seq 2 slot 1
+E (29) esp_image: image at 0x1a0000 has invalid magic byte (nothing flashed here?)
+E (30) boot: OTA app partition slot 1 is not bootable
+I (282) cpu_start: Multicore app
+I (283) octal_psram: vendor id    : 0x0d (AP)
+I (283) octal_psram: dev id       : 0x02 (generation 3)
+I (286) octal_psram: density      : 0x03 (64 Mbit)
+I (291) octal_psram: good-die     : 0x01 (Pass)
+I (297) octal_psram: Latency      : 0x01 (Fixed)
+I (302) octal_psram: VCC          : 0x01 (3V)
+I (307) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (313) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (319) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (324) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (330) octal_psram: DriveStrength: 0x00 (1/1)
+I (336) MSPI Timing: PSRAM timing tuning index: 5
+I (341) esp_psram: Found 8MB PSRAM device
+I (345) esp_psram: Speed: 80MHz
+I (349) cpu_start: Pro cpu up.
+I (353) cpu_start: Starting app cpu, entry point is 0x40375080
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700
+.I (0) cpu_start: App cpu up.
+I (782) esp_psram: SPI SRAM memory test OK
+I (791) cpu_start: Pro cpu start user code
+I (791) cpu_start: cpu freq: 240000000 Hz
+I (791) cpu_start: Application information:
+I (794) cpu_start: Project name:     FD_ROUND_S3
+I (799) cpu_start: App version:      notes/2.3.0-2.5.8-11-g72a13da-d
+I (806) cpu_start: Compile time:     Oct 18 2026 12:44:02
+I (812) cpu_start: ELF file SHA256:  2af0028aaaacea64...
+I (818) cpu_start: ESP-IDF:          v5.0.9
+I (823) cpu_start: Min chip rev:     v0.0
+I (828) cpu_start: Max chip rev:     v0.99
+I (833) cpu_start: Chip rev:         v0.2
+I (837) heap_init: Initializing. RAM available for dynamic allocation:
+I (845) heap_init: At 3FCAD668 len 0003C0A8 (240 KiB): DRAM
+I (851) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM
+I (858) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (864) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM
+I (870) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (878) spi_flash: detected chip: boya
+I (882) spi_flash: flash io: qio
+I (886) coexist: coexist rom version e7ae62f
+I (891) app_start: Starting scheduler on CPU0
+I (896) app_start: Starting scheduler on CPU1
+I (896) main_task: Started on CPU0
+I (906) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (916) main_task: Calling app_main()
+W (916) MAIN: boot FD_ROUND_S3 3.0.15
+W (926) SAFE_OTA: single image at 0x00010000, factory rollback off
+I (926) SETTINGS: NVS namespace 'storage' ready
+I (936) gpio: GPIO[6]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (946) gpio: GPIO[7]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+W (956) SM_RELAY: relays OK A=GPIO6 B=GPIO7 both OFF
+W (956) MAIN: stage: relays OK (both OFF)
+W (966) ADC_PWM: backlight PWM GPIO21 ON
+W (966) MAIN: stage: adc/pwm done
+I (976) GBT_CAN: CAN/TWAI up: TX=17 RX=18 bitrate=250000
+W (976) MAIN: stage: CAN task ok
+W (986) MAIN: stage: SM 10ms task ok
+I (986) SM_RELAY: state -> HANDSHAKE_INIT (1) sub=0
+I (996) SM_RELAY: state -> WAIT_CRM (2) sub=0
+W (996) BMS: UART 9600: A TX1/RX2, B TX40/RX41. +13 В разъёма на ESP не подавать
+I (1006) gpio: GPIO[42]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1016) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2
+W (1026) FARDRIVER: мост 19200 8N1 TX GPIO42 -> RX фарика, RX GPIO39 <- TX фарика. Земля общая, без резистора
+W (1036) TOUCH: XPT2046 waits for SPI. GPIO1/2 are BMS, not this touch
+W (1046) MAIN: stage: touch ok
+I (1056) pp: pp rom version: e7ae62f
+I (1056) net80211: net80211 rom version: e7ae62f
+I (1066) wifi:wifi driver task: 3fcc5e40, prio:23, stack:3584, core=0
+I (1066) system_api: Base MAC address is not set
+I (1076) system_api: read default base MAC address from EFUSE
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 5f3577a3888425c3ad4b7977cdb65d56d0f3ce2a86ab853ae4567e1ea08d6700

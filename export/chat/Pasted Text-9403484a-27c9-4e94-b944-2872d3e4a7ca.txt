@@ -1,0 +1,592 @@
+лог с включения, скачать /api/trace
+952 [0;32mI (956) SETTINGS: NVS namespace 'storage' ready[0m
+953 [0;32mI (956) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0
+960 [0;33mW (956) TOUCH: XPT2046 CS=16 IRQ=8 MISO=9[0m
+965 [0;32mI (966) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 
+974 [0;33mW (976) DISPLAY: panel create ILI9341...[0m
+978 [0;32mI (976) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 
+988 [0;32mI (986) ili9341: LCD panel create success, version: 1.0.2[0m
+1112 [0;33mW (1116) DISPLAY: backlight PWM GPIO21 100%[0m
+1256 [0;33mW (1256) DISPLAY: panel ready[0m
+1257 [0;33mW (1256) DISPLAY: panel on invert=0 bgr=1 mirror=1,0[0m
+1257 [0;32mI (1256) temperature_sensor: Range [-10°C ~ 80°C], error < 1°C[0m
+1265 [0;33mW (1266) DISPLAY: LVGL heap in PSRAM, building UI[0m
+1451 [0;32mI (1446) DISPLAY: LCD portrait 240x320 (ST7789=0)[0m
+1452 [0;32mI (1456) SM_RELAY: state -> HANDSHAKE_INIT (1) sub=0[0m
+1452 [0;33mW (1456) MAIN: stage: LCD/LVGL ok (before BLE)[0m
+1484 [0;32mI (1486) BLE_INIT: BT controller compile version [edf923e][0m
+1484 [0;32mI (1486) system_api: Base MAC address is not set[0m
+1488 [0;32mI (1486) system_api: read default base MAC address from EFUSE[0m
+1495 [0;32mI (1496) BLE_INIT: Bluetooth MAC: 7c:4f:ad:b6:9c:36
+1501 [0;32mI (1496) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+1564 [0;32mI (1566) BLE: GATT service started, base handle=40[0m
+1567 [0;32mI (1566) BLE: advertising started[0m
+1568 [0;32mI (1566) BLE: BLE initialized: name=FarDriver service=0xFFE0 char=0xFFEC[0m
+1570 [0;33mW (1566) MAIN: stage: BLE ok (after LCD, before Wi-Fi)[0m
+1576 [0;32mI (1576) gpio: GPIO[6]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown:
+1586 [0;32mI (1586) gpio: GPIO[7]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown:
+1595 [0;33mW (1596) SM_RELAY: relays OK A=GPIO6 B=GPIO7 both OFF[0m
+1603 [0;33mW (1606) MAIN: stage: relays OK (both OFF)[0m
+1605 [0;33mW (1606) ADC_PWM: backlight left to display[0m
+1610 [0;33mW (1606) MAIN: stage: adc/pwm done[0m
+1614 [0;31mE (1616) GBT_CAN: CAN install ESP_ERR_NOT_FOUND[0m
+1623 [0;31mE (1626) MAIN: CAN init failed: ESP_ERR_NOT_FOUND[0m
+1625 12V up, handshake now
+1625 [0;33mW (1626) MAIN: stage: SM 10ms task ok[0m
+1625 [0;32mI (1626) SM_RELAY: state -> HANDSHAKE_INIT (1) sub=0[0m
+1635 [0;32mI (1636) SM_RELAY: state -> WAIT_CRM (2) sub=0[0m
+1640 [0;32mI (1636) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown:
+1642 [0;31mE (1646) GBT_CAN: CAN install ESP_ERR_NOT_FOUND[0m
+1655 CAN не стартовал
+1655 [0;33mW (1656) SM_RELAY: CAN не стартовал[0m
+1657 [0;32mI (1656) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown:
+1669 [0;33mW (1666) BMS: A soft 9600 TX1/RX2, B UART2 TX40/RX41. +13 В разъёма на ES
+1871 [0;33mW (1876) FARDRIVER: probe 19200 n=96 score=24 aa ac 00 00[0m
+1889 [0;32mI (1886) BMS: JBD-A нет ответа[0m
+1891 [0;31mE (1896) GBT_CAN: CAN install ESP_ERR_NOT_FOUND[0m
+2142 [0;31mE (2146) GBT_CAN: CAN install ESP_ERR_NOT_FOUND[0m
+2357 [0;33mW (2356) FARDRIVER: probe 115200 n=192 score=0 00 e0 e0 e0[0m
+2391 [0;31mE (2396) GBT_CAN: CAN install ESP_ERR_NOT_FOUND[0m
+2538 [0;33mW (2536) FARDRIVER: probe 921600 n=192 score=0 00 00 00 00[0m
+2539 [0;33mW (2536) FARDRIVER: Fardriver baud 19200[0m
+2540 [0;33mW (2536) FARDRIVER: ESP TX GPIO42 -> RXD фарика, ESP RX GPIO39 <- TXD фар�
+2548 [0;33mW (2546) TOUCH: XPT2046 already on SPI CS=16[0m
+2553 [0;33mW (2556) MAIN: stage: touch ok[0m
+2558 [0;32mI (2556) pp: pp rom version: e7ae62f[0m
+2561 [0;32mI (2556) net80211: net80211 rom version: e7ae62f[0m
+2571 I (2576) wifi:
+2572 wifi driver task: 3fcd728c, prio:23, stack:3584, core=0
+2574 I (2576) wifi:
+2574 wifi firmware version: f4bd5bac9
+2576 I (2576) wifi:
+2576 wifi certification version: v7.0
+2580 I (2576) wifi:
+2580 config NVS flash: enabled
+2584 I (2586) wifi:
+2584 config nano formating: disabled
+2588 I (2586) wifi:
+2588 Init data frame dynamic rx buffer num: 8
+2593 I (2596) wifi:
+2593 Init static rx mgmt buffer num: 5
+2597 I (2596) wifi:
+2597 Init management short buffer num: 8
+2602 I (2606) wifi:
+2602 Init static tx buffer num: 16
+2606 I (2606) wifi:
+2606 Init tx cache buffer num: 16
+2609 I (2606) wifi:
+2609 Init static tx FG buffer num: 2
+2613 I (2616) wifi:
+2614 Init static rx buffer size: 1600
+2618 I (2616) wifi:
+2618 Init static rx buffer num: 6
+2621 I (2626) wifi:
+2621 Init dynamic rx buffer num: 8
+2626 [0;32mI (2626) wifi_init: rx ba win: 6[0m
+2629 [0;32mI (2626) wifi_init: tcpip mbox: 16[0m
+2633 [0;32mI (2636) wifi_init: udp mbox: 6[0m
+2637 [0;32mI (2636) wifi_init: tcp mbox: 6[0m
+2641 [0;32mI (2636) wifi_init: tcp tx win: 5760[0m
+2641 [0;31mE (2646) GBT_CAN: CAN install ESP_ERR_NOT_FOUND[0m
+2650 CAN не стартовал
+2650 [0;33mW (2646) SM_RELAY: CAN не стартовал[0m
+2656 [0;33mW (2656) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+2661 [0;32mI (2656) wifi_init: tcp rx win: 5760[0m
+2665 [0;32mI (2666) wifi_init: tcp mss: 1440[0m
+2669 [0;32mI (2666) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+2674 [0;32mI (2676) wifi_init: WiFi IRAM OP enabled[0m
+2678 [0;32mI (2676) wifi_init: WiFi RX IRAM OP enabled[0m
+2683 [0;33mW (2686) WEB: wifi buffers static_rx=6 dyn_rx=8 dyn_tx=8 ampdu_rx=0[0m
+2690 [0;33mW (2686) WEB: wifi storage RAM -> ESP_OK[0m
+2695 I (2696) wifi:
+2695 Set ps type: 0, coexist: 0
+2699 I (2696) wifi:
+2699 set country: cc=CN
+2897 [0;32mI (2896) GBT_CAN: CAN/TWAI up: TX=17 RX=18 bitrate=250000[0m
+3056 I (3056) wifi:
+3057 mode : softAP (7c:4f:ad:b6:9c:35)
+3060 I (3056) wifi:
+3060 Total power save buffer number: 8
+3061 I (3056) wifi:
+3061 Init max length of beacon: 752/752
+3062 I (3066) wifi:
+3062 Init max length of beacon: 752/752
+3065 [0;33mW (3066) WEB: AP tx power 10 dBm[0m
+3067 [0;33mW (3066) WEB: AP check auth=3 pmf=0 key_len=8 ch=6 hidden=0[0m
+3073 [0;33mW (3076) WEB: AP only SSID=Cube ch=6[0m
+3080 [0;33mW (3076) WEB: softAP started SSID:Cube channel:6[0m
+3083 [0;32mI (3086) WEB: Wi-Fi AP=Cube UI=http://192.168.4.1/[0m
+3088 [0;33mW (3086) MAIN: stage: Web AP ok[0m
+3089 [0;33mW (3086) WEB: dns up[0m
+3095 [0;33mW (3096) MAIN: READY 3.0.47 CAN_TX=1 WiFi=Cube int=66923 psram=7948180[0m
+3671 нет ACK t32 r0
+3671 [0;33mW (3676) SM_RELAY: нет ACK t32 r0[0m
+4671 нет ACK t64 r0
+4671 [0;33mW (4676) SM_RELAY: нет ACK t64 r0[0m
+5440 [0;32mI (5436) BMS: JBD-A нет ответа[0m
+5671 нет ACK t96 r0
+5671 [0;33mW (5676) SM_RELAY: нет ACK t96 r0[0m
+5718 [0;33mW (5716) FARDRIVER: uart rx=1800 tx=24 кадры=112 rpm=0 last=96 3c 02 3d[0m
+6201 [0;33mW (6206) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+6681 нет ACK t8 r0
+6681 [0;33mW (6686) SM_RELAY: нет ACK t8 r0[0m
+7681 нет ACK t40 r0
+7681 [0;33mW (7686) SM_RELAY: нет ACK t40 r0[0m
+8681 нет ACK t72 r0
+8681 [0;33mW (8686) SM_RELAY: нет ACK t72 r0[0m
+8861 [0;33mW (8856) FARDRIVER: uart rx=3600 tx=40 кадры=224 rpm=0 last=e1 9c ce 00[0m
+8991 [0;32mI (8986) BMS: JBD-A нет ответа[0m
+9681 нет ACK t104 r0
+9681 [0;33mW (9686) SM_RELAY: нет ACK t104 r0[0m
+9751 [0;33mW (9756) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+10681 нет ACK t16 r0
+10681 [0;33mW (10686) SM_RELAY: нет ACK t16 r0[0m
+11681 нет ACK t48 r0
+11681 [0;33mW (11686) SM_RELAY: нет ACK t48 r0[0m
+12033 [0;33mW (12036) FARDRIVER: uart rx=5400 tx=64 кадры=337 rpm=0 last=9b 64 64 64[0m
+12540 [0;32mI (12536) BMS: JBD-A нет ответа[0m
+12681 нет ACK t80 r0
+12682 [0;33mW (12686) SM_RELAY: нет ACK t80 r0[0m
+13301 [0;33mW (13306) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+13681 нет ACK t112 r0
+13681 [0;33mW (13686) SM_RELAY: нет ACK t112 r0[0m
+14681 нет ACK t24 r0
+14681 [0;33mW (14686) SM_RELAY: нет ACK t24 r0[0m
+15176 [0;33mW (15176) FARDRIVER: uart rx=7200 tx=80 кадры=449 rpm=0 last=00 00 00 00[0m
+15681 нет ACK t56 r0
+15682 [0;33mW (15686) SM_RELAY: нет ACK t56 r0[0m
+16090 [0;32mI (16086) BMS: JBD-A нет ответа[0m
+16681 нет ACK t88 r0
+16681 [0;33mW (16686) SM_RELAY: нет ACK t88 r0[0m
+16851 [0;33mW (16856) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+17681 нет ACK t120 r0
+17681 [0;33mW (17686) SM_RELAY: нет ACK t120 r0[0m
+18347 [0;33mW (18346) FARDRIVER: uart rx=9000 tx=104 кадры=562 rpm=0 last=a0 aa a7 a3[0m
+18681 нет ACK t32 r0
+18682 [0;33mW (18686) SM_RELAY: нет ACK t32 r0[0m
+19640 [0;32mI (19636) BMS: JBD-A нет ответа[0m
+19681 нет ACK t64 r0
+19681 [0;33mW (19686) SM_RELAY: нет ACK t64 r0[0m
+20401 [0;33mW (20406) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+20681 нет ACK t96 r0
+20681 [0;33mW (20686) SM_RELAY: нет ACK t96 r0[0m
+21491 [0;33mW (21486) FARDRIVER: uart rx=10800 tx=120 кадры=674 rpm=0 last=31 38 36 00[0
+21681 нет ACK t8 r0
+21681 [0;33mW (21686) SM_RELAY: нет ACK t8 r0[0m
+22681 нет ACK t40 r0
+22681 [0;33mW (22686) SM_RELAY: нет ACK t40 r0[0m
+23190 [0;32mI (23186) BMS: JBD-A нет ответа[0m
+23681 нет ACK t72 r0
+23681 [0;33mW (23686) SM_RELAY: нет ACK t72 r0[0m
+23951 [0;33mW (23956) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+24662 [0;33mW (24666) FARDRIVER: uart rx=12600 tx=144 кадры=787 rpm=0 last=a5 00 00 00[0
+24681 нет ACK t104 r0
+24681 [0;33mW (24686) SM_RELAY: нет ACK t104 r0[0m
+25681 нет ACK t16 r0
+25681 [0;33mW (25686) SM_RELAY: нет ACK t16 r0[0m
+26681 нет ACK t48 r0
+26681 [0;33mW (26686) SM_RELAY: нет ACK t48 r0[0m
+26740 [0;32mI (26736) BMS: JBD-A нет ответа[0m
+27501 [0;33mW (27506) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+27681 нет ACK t80 r0
+27682 [0;33mW (27686) SM_RELAY: нет ACK t80 r0[0m
+27806 [0;33mW (27806) FARDRIVER: uart rx=14400 tx=160 кадры=899 rpm=0 last=00 00 00 00[0
+28681 нет ACK t112 r0
+28681 [0;33mW (28686) SM_RELAY: нет ACK t112 r0[0m
+29681 нет ACK t24 r0
+29681 [0;33mW (29686) SM_RELAY: нет ACK t24 r0[0m
+30290 [0;32mI (30286) BMS: JBD-A нет ответа[0m
+30681 нет ACK t56 r0
+30681 [0;33mW (30686) SM_RELAY: нет ACK t56 r0[0m
+30977 [0;33mW (30976) FARDRIVER: uart rx=16200 tx=184 кадры=1012 rpm=0 last=aa 89 0b 00[
+31051 [0;33mW (31056) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+31641 кадров станции нет, BHM дальше
+31681 нет ACK t88 r0
+31681 [0;33mW (31686) SM_RELAY: нет ACK t88 r0[0m
+32681 нет ACK t120 r0
+32682 [0;33mW (32686) SM_RELAY: нет ACK t120 r0[0m
+33682 нет ACK t32 r0
+33682 [0;33mW (33686) SM_RELAY: нет ACK t32 r0[0m
+33841 [0;32mI (33836) BMS: JBD-A нет ответа[0m
+34120 [0;33mW (34116) FARDRIVER: uart rx=18000 tx=200 кадры=1124 rpm=0 last=00 00 00 00[
+34601 [0;33mW (34606) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+34681 нет ACK t64 r0
+34682 [0;33mW (34686) SM_RELAY: нет ACK t64 r0[0m
+35681 нет ACK t96 r0
+35682 [0;33mW (35686) SM_RELAY: нет ACK t96 r0[0m
+36681 нет ACK t8 r0
+36681 [0;33mW (36686) SM_RELAY: нет ACK t8 r0[0m
+37292 [0;33mW (37296) FARDRIVER: uart rx=19800 tx=224 кадры=1237 rpm=0 last=af 08 61 00[
+37390 [0;32mI (37386) BMS: JBD-A нет ответа[0m
+37681 нет ACK t40 r0
+37681 [0;33mW (37686) SM_RELAY: нет ACK t40 r0[0m
+38151 [0;33mW (38156) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+38681 нет ACK t72 r0
+38682 [0;33mW (38686) SM_RELAY: нет ACK t72 r0[0m
+39681 нет ACK t104 r0
+39681 [0;33mW (39686) SM_RELAY: нет ACK t104 r0[0m
+40435 [0;33mW (40436) FARDRIVER: uart rx=21600 tx=240 кадры=1349 rpm=0 last=00 00 00 00[
+40681 нет ACK t16 r0
+40681 [0;33mW (40686) SM_RELAY: нет ACK t16 r0[0m
+40940 [0;32mI (40936) BMS: JBD-A нет ответа[0m
+41681 нет ACK t48 r0
+41681 [0;33mW (41686) SM_RELAY: нет ACK t48 r0[0m
+41701 [0;33mW (41706) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+42681 нет ACK t80 r0
+42681 [0;33mW (42686) SM_RELAY: нет ACK t80 r0[0m
+43607 [0;33mW (43606) FARDRIVER: uart rx=23400 tx=264 кадры=1462 rpm=0 last=b4 00 00 c9[
+43681 нет ACK t112 r0
+43681 [0;33mW (43686) SM_RELAY: нет ACK t112 r0[0m
+44490 [0;32mI (44486) BMS: JBD-A нет ответа[0m
+44681 нет ACK t24 r0
+44681 [0;33mW (44686) SM_RELAY: нет ACK t24 r0[0m
+45252 [0;33mW (45256) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+45681 нет ACK t56 r0
+45681 [0;33mW (45686) SM_RELAY: нет ACK t56 r0[0m
+46681 нет ACK t88 r0
+46681 [0;33mW (46686) SM_RELAY: нет ACK t88 r0[0m
+46750 [0;33mW (46746) FARDRIVER: uart rx=25200 tx=280 кадры=1574 rpm=0 last=02 21 22 f1[
+47681 нет ACK t120 r0
+47681 [0;33mW (47686) SM_RELAY: нет ACK t120 r0[0m
+48041 [0;32mI (48036) BMS: JBD-A нет ответа[0m
+48681 нет ACK t32 r0
+48681 [0;33mW (48686) SM_RELAY: нет ACK t32 r0[0m
+48801 [0;33mW (48806) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+49681 нет ACK t64 r0
+49681 [0;33mW (49686) SM_RELAY: нет ACK t64 r0[0m
+49922 [0;33mW (49926) FARDRIVER: uart rx=27000 tx=304 кадры=1687 rpm=0 last=82 00 00 00[
+50681 нет ACK t96 r0
+50682 [0;33mW (50686) SM_RELAY: нет ACK t96 r0[0m
+51590 [0;32mI (51586) BMS: JBD-A нет ответа[0m
+51681 нет ACK t8 r0
+51681 [0;33mW (51686) SM_RELAY: нет ACK t8 r0[0m
+52352 [0;33mW (52356) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+52681 нет ACK t40 r0
+52681 [0;33mW (52686) SM_RELAY: нет ACK t40 r0[0m
+53065 [0;33mW (53066) FARDRIVER: uart rx=28800 tx=320 кадры=1799 rpm=0 last=20 31 00 00[
+53681 нет ACK t72 r0
+53682 [0;33mW (53686) SM_RELAY: нет ACK t72 r0[0m
+54681 нет ACK t104 r0
+54681 [0;33mW (54686) SM_RELAY: нет ACK t104 r0[0m
+55140 [0;32mI (55136) BMS: JBD-A нет ответа[0m
+55681 нет ACK t16 r0
+55681 [0;33mW (55686) SM_RELAY: нет ACK t16 r0[0m
+55902 [0;33mW (55906) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+56236 [0;33mW (56236) FARDRIVER: uart rx=30600 tx=344 кадры=1912 rpm=0 last=87 89 0b 00[
+56681 нет ACK t48 r0
+56681 [0;33mW (56686) SM_RELAY: нет ACK t48 r0[0m
+57681 нет ACK t80 r0
+57681 [0;33mW (57686) SM_RELAY: нет ACK t80 r0[0m
+58681 нет ACK t112 r0
+58681 [0;33mW (58686) SM_RELAY: нет ACK t112 r0[0m
+58690 [0;32mI (58686) BMS: JBD-A нет ответа[0m
+59380 [0;33mW (59376) FARDRIVER: uart rx=32400 tx=360 кадры=2024 rpm=0 last=00 00 00 00[
+59451 [0;33mW (59456) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+59681 нет ACK t24 r0
+59681 [0;33mW (59686) SM_RELAY: нет ACK t24 r0[0m
+60681 нет ACK t56 r0
+60681 [0;33mW (60686) SM_RELAY: нет ACK t56 r0[0m
+61651 кадров станции нет, BHM дальше
+61681 нет ACK t88 r0
+61681 [0;33mW (61686) SM_RELAY: нет ACK t88 r0[0m
+62240 [0;32mI (62236) BMS: JBD-A нет ответа[0m
+62551 [0;33mW (62546) FARDRIVER: uart rx=34200 tx=384 кадры=2137 rpm=0 last=8c 0f 10 f3[
+62681 нет ACK t120 r0
+62681 [0;33mW (62686) SM_RELAY: нет ACK t120 r0[0m
+63001 [0;33mW (63006) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+63681 нет ACK t32 r0
+63681 [0;33mW (63686) SM_RELAY: нет ACK t32 r0[0m
+64681 нет ACK t64 r0
+64681 [0;33mW (64686) SM_RELAY: нет ACK t64 r0[0m
+65681 нет ACK t80 r0
+65681 [0;33mW (65686) SM_RELAY: нет ACK t80 r0[0m
+65694 [0;33mW (65696) FARDRIVER: uart rx=36000 tx=400 кадры=2249 rpm=0 last=00 01 00 fe[
+65790 [0;32mI (65786) BMS: JBD-A нет ответа[0m
+66552 [0;33mW (66556) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+66681 нет ACK t88 r0
+66681 [0;33mW (66686) SM_RELAY: нет ACK t88 r0[0m
+67681 нет ACK t88 r0
+67681 [0;33mW (67686) SM_RELAY: нет ACK t88 r0[0m
+68681 нет ACK t88 r0
+68681 [0;33mW (68686) SM_RELAY: нет ACK t88 r0[0m
+68866 [0;33mW (68866) FARDRIVER: uart rx=37800 tx=424 кадры=2362 rpm=0 last=91 0f 00 32[
+69340 [0;32mI (69336) BMS: JBD-A нет ответа[0m
+69681 нет ACK t144 r0
+69681 [0;33mW (69686) SM_RELAY: нет ACK t144 r0[0m
+70101 [0;33mW (70106) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+70681 нет ACK t8 r0
+70681 [0;33mW (70686) SM_RELAY: нет ACK t8 r0[0m
+71681 нет ACK t8 r0
+71682 [0;33mW (71686) SM_RELAY: нет ACK t8 r0[0m
+72009 [0;33mW (72006) FARDRIVER: uart rx=39600 tx=440 кадры=2474 rpm=0 last=01 d0 02 21[
+72681 нет ACK t24 r0
+72681 [0;33mW (72686) SM_RELAY: нет ACK t24 r0[0m
+72891 [0;32mI (72896) BMS: JBD-A нет ответа[0m
+73651 [0;33mW (73656) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+73681 нет ACK t24 r0
+73681 [0;33mW (73686) SM_RELAY: нет ACK t24 r0[0m
+74681 нет ACK t24 r0
+74681 [0;33mW (74686) SM_RELAY: нет ACK t24 r0[0m
+75181 [0;33mW (75176) FARDRIVER: uart rx=41400 tx=464 кадры=2587 rpm=0 last=96 3c 02 3d[
+75681 нет ACK t88 r0
+75681 [0;33mW (75686) SM_RELAY: нет ACK t88 r0[0m
+76440 [0;32mI (76436) BMS: JBD-A нет ответа[0m
+76681 нет ACK t88 r0
+76681 [0;33mW (76686) SM_RELAY: нет ACK t88 r0[0m
+76881 I (76876) wifi:
+76881 new:<6,0>, old:<6,1>, ap:<6,1>, sta:<255,255>, prof:6
+76882 I (76886) wifi:
+76882 station: 2e:9c:bf:8d:93:a6 join, AID=1, bgn, 20
+76933 [0;32mI (76936) WEB: STA connected 2E:9C:BF:8D:93:A6 AID=1 heap=8013132[0m
+77202 [0;33mW (77206) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+77355 [0;32mI (77356) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2
+77681 нет ACK t112 r0
+77682 [0;33mW (77686) SM_RELAY: нет ACK t112 r0[0m
+78324 [0;33mW (78326) FARDRIVER: uart rx=43200 tx=480 кадры=2699 rpm=0 last=e1 9c ce 00[
+78681 нет ACK t8 r0
+78681 [0;33mW (78686) SM_RELAY: нет ACK t8 r0[0m
+79682 нет ACK t16 r0
+79684 [0;33mW (79686) SM_RELAY: нет ACK t16 r0[0m
+79991 [0;32mI (79986) BMS: JBD-A нет ответа[0m
+80681 нет ACK t16 r0
+80682 [0;33mW (80686) SM_RELAY: нет ACK t16 r0[0m
+80751 [0;33mW (80756) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+81496 [0;33mW (81496) FARDRIVER: uart rx=45000 tx=504 кадры=2812 rpm=0 last=9b 64 64 64[
+81683 нет ACK t16 r0
+81683 [0;33mW (81686) SM_RELAY: нет ACK t16 r0[0m
+82681 нет ACK t16 r0
+82681 [0;33mW (82686) SM_RELAY: нет ACK t16 r0[0m
+83540 [0;32mI (83536) BMS: JBD-A нет ответа[0m
+83681 нет ACK t80 r0
+83681 [0;33mW (83686) SM_RELAY: нет ACK t80 r0[0m
+84301 [0;33mW (84306) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+84639 [0;33mW (84636) FARDRIVER: uart rx=46800 tx=520 кадры=2924 rpm=0 last=00 00 00 00[
+84681 нет ACK t80 r0
+84681 [0;33mW (84686) SM_RELAY: нет ACK t80 r0[0m
+85682 нет ACK t80 r0
+85684 [0;33mW (85686) SM_RELAY: нет ACK t80 r0[0m
+86681 нет ACK t80 r0
+86681 [0;33mW (86686) SM_RELAY: нет ACK t80 r0[0m
+87090 [0;32mI (87086) BMS: JBD-A нет ответа[0m
+87682 нет ACK t104 r0
+87683 [0;33mW (87686) SM_RELAY: нет ACK t104 r0[0m
+87810 [0;33mW (87806) FARDRIVER: uart rx=48600 tx=544 кадры=3037 rpm=0 last=a0 aa a7 a3[
+87852 [0;33mW (87856) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+88684 нет ACK t104 r0
+88684 [0;33mW (88686) SM_RELAY: нет ACK t104 r0[0m
+89682 нет ACK t104 r0
+89682 [0;33mW (89686) SM_RELAY: нет ACK t104 r0[0m
+90641 [0;32mI (90636) BMS: JBD-A нет ответа[0m
+90681 нет ACK t104 r0
+90681 [0;33mW (90686) SM_RELAY: нет ACK t104 r0[0m
+90953 [0;33mW (90956) FARDRIVER: uart rx=50400 tx=560 кадры=3149 rpm=0 last=31 38 36 00[
+91401 [0;33mW (91406) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+91682 нет ACK t104 r0
+91682 [0;33mW (91686) SM_RELAY: нет ACK t104 r0[0m
+91682 кадров станции нет, BHM дальше
+92681 нет ACK t104 r0
+92681 [0;33mW (92686) SM_RELAY: нет ACK t104 r0[0m
+93683 нет ACK t104 r0
+93684 [0;33mW (93686) SM_RELAY: нет ACK t104 r0[0m
+94125 [0;33mW (94126) FARDRIVER: uart rx=52200 tx=584 кадры=3262 rpm=0 last=a5 00 00 00[
+94191 [0;32mI (94186) BMS: JBD-A нет ответа[0m
+94681 нет ACK t120 r0
+94681 [0;33mW (94686) SM_RELAY: нет ACK t120 r0[0m
+94951 [0;33mW (94956) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+95681 нет ACK t16 r18
+95681 [0;33mW (95686) SM_RELAY: нет ACK t16 r18[0m
+96682 нет ACK t24 r0
+96682 [0;33mW (96686) SM_RELAY: нет ACK t24 r0[0m
+97269 [0;33mW (97266) FARDRIVER: uart rx=54000 tx=600 кадры=3374 rpm=0 last=00 00 00 00[
+97681 нет ACK t24 r0
+97682 [0;33mW (97686) SM_RELAY: нет ACK t24 r0[0m
+97740 [0;32mI (97736) BMS: JBD-A нет ответа[0m
+98504 [0;33mW (98506) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+98681 нет ACK t24 r0
+98681 [0;33mW (98686) SM_RELAY: нет ACK t24 r0[0m
+99682 нет ACK t24 r0
+99682 [0;33mW (99686) SM_RELAY: нет ACK t24 r0[0m
+100440 [0;33mW (100436) FARDRIVER: uart rx=55800 tx=624 кадры=3487 rpm=0 last=aa 89 0a 00
+100681 нет ACK t24 r0
+100681 [0;33mW (100686) SM_RELAY: нет ACK t24 r0[0m
+101291 [0;32mI (101286) BMS: JBD-A нет ответа[0m
+101681 нет ACK t24 r0
+101681 [0;33mW (101686) SM_RELAY: нет ACK t24 r0[0m
+102051 [0;33mW (102056) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+102681 нет ACK t24 r0
+102681 [0;33mW (102686) SM_RELAY: нет ACK t24 r0[0m
+103584 [0;33mW (103586) FARDRIVER: uart rx=57600 tx=640 кадры=3599 rpm=0 last=00 00 00 00
+103681 нет ACK t24 r0
+103681 [0;33mW (103686) SM_RELAY: нет ACK t24 r0[0m
+104682 нет ACK t24 r0
+104682 [0;33mW (104686) SM_RELAY: нет ACK t24 r0[0m
+104857 [0;32mI (104856) BMS: JBD-A нет ответа[0m
+105621 [0;33mW (105626) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+105701 нет ACK t24 r0
+105701 [0;33mW (105706) SM_RELAY: нет ACK t24 r0[0m
+106701 нет ACK t24 r0
+106702 [0;33mW (106706) SM_RELAY: нет ACK t24 r0[0m
+106755 [0;33mW (106756) FARDRIVER: uart rx=59400 tx=664 кадры=3712 rpm=0 last=af 08 61 00
+107701 нет ACK t40 r0
+107701 [0;33mW (107706) SM_RELAY: нет ACK t40 r0[0m
+108410 [0;32mI (108406) BMS: JBD-A нет ответа[0m
+108701 нет ACK t40 r0
+108702 [0;33mW (108706) SM_RELAY: нет ACK t40 r0[0m
+109171 [0;33mW (109176) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+109386 I (109386) wifi:
+109386 station: 2e:9c:bf:8d:93:a6 leave, AID = 1, reason = 3, bss_flags is 655459, bss:0x3c1cb8
+109387 I (109386) wifi:
+109387 new:<6,0>, old:<6,0>, ap:<6,1>, sta:<255,255>, prof:6
+109391 [0;33mW (109396) WEB: STA disconnected 2E:9C:BF:8D:93:A6 AID=1[0m
+109701 нет ACK t104 r0
+109701 [0;33mW (109706) SM_RELAY: нет ACK t104 r0[0m
+109898 [0;33mW (109896) FARDRIVER: uart rx=61200 tx=680 кадры=3824 rpm=0 last=00 00 00 00
+110701 нет ACK t104 r0
+110702 [0;33mW (110706) SM_RELAY: нет ACK t104 r0[0m
+111701 нет ACK t104 r0
+111701 [0;33mW (111706) SM_RELAY: нет ACK t104 r0[0m
+111960 [0;32mI (111956) BMS: JBD-A нет ответа[0m
+112701 нет ACK t104 r0
+112701 [0;33mW (112706) SM_RELAY: нет ACK t104 r0[0m
+112721 [0;33mW (112726) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+113070 [0;33mW (113066) FARDRIVER: uart rx=63000 tx=704 кадры=3937 rpm=0 last=b4 00 00 c9
+113701 нет ACK t0 r0
+113701 [0;33mW (113706) SM_RELAY: нет ACK t0 r0[0m
+114701 нет ACK t0 r0
+114701 [0;33mW (114706) SM_RELAY: нет ACK t0 r0[0m
+115510 [0;32mI (115506) BMS: JBD-A нет ответа[0m
+115701 нет ACK t8 r0
+115701 [0;33mW (115706) SM_RELAY: нет ACK t8 r0[0m
+116213 [0;33mW (116216) FARDRIVER: uart rx=64800 tx=720 кадры=4049 rpm=0 last=02 21 22 f1
+116271 [0;33mW (116276) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+116701 нет ACK t72 r0
+116701 [0;33mW (116706) SM_RELAY: нет ACK t72 r0[0m
+117701 нет ACK t72 r0
+117701 [0;33mW (117706) SM_RELAY: нет ACK t72 r0[0m
+118701 нет ACK t72 r0
+118701 [0;33mW (118706) SM_RELAY: нет ACK t72 r0[0m
+119060 [0;32mI (119056) BMS: JBD-A нет ответа[0m
+119385 [0;33mW (119386) FARDRIVER: uart rx=66600 tx=744 кадры=4162 rpm=0 last=82 00 00 00
+119701 нет ACK t72 r0
+119701 [0;33mW (119706) SM_RELAY: нет ACK t72 r0[0m
+119822 [0;33mW (119826) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+120701 нет ACK t80 r0
+120701 [0;33mW (120706) SM_RELAY: нет ACK t80 r0[0m
+121671 кадров станции нет, BHM дальше
+121701 нет ACK t80 r0
+121701 [0;33mW (121706) SM_RELAY: нет ACK t80 r0[0m
+122528 [0;33mW (122526) FARDRIVER: uart rx=68400 tx=760 кадры=4274 rpm=0 last=20 31 00 00
+122610 [0;32mI (122606) BMS: JBD-A нет ответа[0m
+122701 нет ACK t136 r0
+122701 [0;33mW (122706) SM_RELAY: нет ACK t136 r0[0m
+123371 [0;33mW (123376) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+123701 нет ACK t8 r0
+123702 [0;33mW (123706) SM_RELAY: нет ACK t8 r0[0m
+124701 нет ACK t8 r0
+124701 [0;33mW (124706) SM_RELAY: нет ACK t8 r0[0m
+125700 [0;33mW (125696) FARDRIVER: uart rx=70200 tx=784 кадры=4387 rpm=0 last=87 89 0a 00
+125701 нет ACK t8 r0
+125701 [0;33mW (125706) SM_RELAY: нет ACK t8 r0[0m
+126160 [0;32mI (126156) BMS: JBD-A нет ответа[0m
+126701 нет ACK t8 r0
+126701 [0;33mW (126706) SM_RELAY: нет ACK t8 r0[0m
+126921 [0;33mW (126926) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+127186 I (127186) wifi:
+127187 new:<6,0>, old:<6,0>, ap:<6,1>, sta:<255,255>, prof:6
+127187 I (127186) wifi:
+127187 station: 2e:9c:bf:8d:93:a6 join, AID=1, bgn, 20
+127253 [0;32mI (127256) WEB: STA connected 2E:9C:BF:8D:93:A6 AID=1 heap=8011652[0m
+127701 нет ACK t72 r0
+127701 [0;33mW (127706) SM_RELAY: нет ACK t72 r0[0m
+127887 [0;32mI (127886) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.
+128701 нет ACK t72 r0
+128702 [0;33mW (128706) SM_RELAY: нет ACK t72 r0[0m
+128843 [0;33mW (128846) FARDRIVER: uart rx=72000 tx=800 кадры=4499 rpm=0 last=00 00 00 00
+129701 нет ACK t72 r0
+129701 [0;33mW (129706) SM_RELAY: нет ACK t72 r0[0m
+129710 [0;32mI (129706) BMS: JBD-A нет ответа[0m
+130471 [0;33mW (130476) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+130701 нет ACK t72 r0
+130702 [0;33mW (130706) SM_RELAY: нет ACK t72 r0[0m
+131701 нет ACK t72 r0
+131701 [0;33mW (131706) SM_RELAY: нет ACK t72 r0[0m
+131774 [0;33mW (131776) httpd_txrx: httpd_sock_err: error in send : 104[0m
+131775 [0;33mW (131776) httpd_uri: httpd_uri: uri handler execution failed[0m
+131864 [0;33mW (131866) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+132014 [0;33mW (132016) FARDRIVER: uart rx=73800 tx=824 кадры=4612 rpm=0 last=8c 0f 10 f3
+132711 нет ACK t72 r0
+132711 [0;33mW (132716) SM_RELAY: нет ACK t72 r0[0m
+133260 [0;32mI (133256) BMS: JBD-A нет ответа[0m
+133711 нет ACK t72 r0
+133711 [0;33mW (133716) SM_RELAY: нет ACK t72 r0[0m
+134021 [0;33mW (134026) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+134711 нет ACK t72 r0
+134711 [0;33mW (134716) SM_RELAY: нет ACK t72 r0[0m
+135158 [0;33mW (135156) FARDRIVER: uart rx=75600 tx=840 кадры=4724 rpm=0 last=00 03 00 fd
+135711 нет ACK t72 r0
+135711 [0;33mW (135716) SM_RELAY: нет ACK t72 r0[0m
+136711 нет ACK t72 r0
+136711 [0;33mW (136716) SM_RELAY: нет ACK t72 r0[0m
+136810 [0;32mI (136806) BMS: JBD-A нет ответа[0m
+137571 [0;33mW (137576) BMS: JBD-B 57540 мВ 0 мА soc 12[0m
+137711 нет ACK t72 r0
+137711 [0;33mW (137716) SM_RELAY: нет ACK t72 r0[0m
+138330 [0;33mW (138326) FARDRIVER: uart rx=77400 tx=864 кадры=4837 rpm=0 last=91 0f 00 32
+138711 нет ACK t0 r0
+138711 [0;33mW (138716) SM_RELAY: нет ACK t0 r0[0m
+139711 нет ACK t0 r0
+139711 [0;33mW (139716) SM_RELAY: нет ACK t0 r0[0m
+140363 [0;32mI (140366) BMS: JBD-A нет ответа[0m
+140711 нет ACK t16 r0
+140711 [0;33mW (140716) SM_RELAY: нет ACK t16 r0[0m
+141121 [0;33mW (141126) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+141473 [0;33mW (141476) FARDRIVER: uart rx=79200 tx=880 кадры=4949 rpm=0 last=01 d0 02 21
+141711 нет ACK t16 r0
+141711 [0;33mW (141716) SM_RELAY: нет ACK t16 r0[0m
+142711 нет ACK t96 r0
+142711 [0;33mW (142716) SM_RELAY: нет ACK t96 r0[0m
+143711 нет ACK t96 r0
+143711 [0;33mW (143716) SM_RELAY: нет ACK t96 r0[0m
+143910 [0;32mI (143906) BMS: JBD-A нет ответа[0m
+144644 [0;33mW (144646) FARDRIVER: uart rx=81000 tx=904 кадры=5062 rpm=0 last=96 3c 02 3d
+144671 [0;33mW (144676) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+144711 нет ACK t96 r0
+144711 [0;33mW (144716) SM_RELAY: нет ACK t96 r0[0m
+145711 нет ACK t96 r0
+145711 [0;33mW (145716) SM_RELAY: нет ACK t96 r0[0m
+146711 нет ACK t96 r0
+146711 [0;33mW (146716) SM_RELAY: нет ACK t96 r0[0m
+147460 [0;32mI (147456) BMS: JBD-A нет ответа[0m
+147711 нет ACK t96 r0
+147711 [0;33mW (147716) SM_RELAY: нет ACK t96 r0[0m
+147788 [0;33mW (147786) FARDRIVER: uart rx=82800 tx=920 кадры=5174 rpm=0 last=e1 9c ce 00
+148221 [0;33mW (148226) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+148711 нет ACK t96 r0
+148711 [0;33mW (148716) SM_RELAY: нет ACK t96 r0[0m
+149711 нет ACK t96 r0
+149711 [0;33mW (149716) SM_RELAY: нет ACK t96 r0[0m
+150711 нет ACK t112 r0
+150711 [0;33mW (150716) SM_RELAY: нет ACK t112 r0[0m
+150959 [0;33mW (150956) FARDRIVER: uart rx=84600 tx=944 кадры=5287 rpm=0 last=9b 64 64 64
+151010 [0;32mI (151006) BMS: JBD-A нет ответа[0m
+151681 кадров станции нет, BHM дальше
+151711 нет ACK t112 r0
+151711 [0;33mW (151716) SM_RELAY: нет ACK t112 r0[0m
+151771 [0;33mW (151776) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+152711 нет ACK t112 r0
+152711 [0;33mW (152716) SM_RELAY: нет ACK t112 r0[0m
+153711 нет ACK t112 r0
+153711 [0;33mW (153716) SM_RELAY: нет ACK t112 r0[0m
+154102 [0;33mW (154106) FARDRIVER: uart rx=86400 tx=960 кадры=5399 rpm=0 last=00 00 00 00
+154560 [0;32mI (154556) BMS: JBD-A нет ответа[0m
+154711 нет ACK t112 r0
+154712 [0;33mW (154716) SM_RELAY: нет ACK t112 r0[0m
+155321 [0;33mW (155326) BMS: JBD-B 57550 мВ 0 мА soc 12[0m
+155711 нет ACK t24 r0
+155711 [0;33mW (155716) SM_RELAY: нет ACK t24 r0[0m
+156711 нет ACK t56 r0
+156711 [0;33mW (156716) SM_RELAY: нет ACK t56 r0[0m
+157274 [0;33mW (157276) FARDRIVER: uart rx=88200 tx=984 кадры=5512 rpm=0 last=a0 aa a7 a3
+157711 нет ACK t88 r0
+157711 [0;33mW (157716) SM_RELAY: нет ACK t88 r0[0m
+158113 [0;32mI (158116) BMS: JBD-A нет ответа[0m
